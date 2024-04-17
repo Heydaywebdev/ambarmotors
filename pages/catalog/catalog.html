@@ -1,0 +1,58 @@
+<div class="inventory">
+  <div class="filters-and-cars">
+    <div class="filter">
+      <AmCarsFilter
+        :makes="filters.makes"
+        :models="filters.models"
+        :years="filters.years"
+        :bodies="filters.bodies"
+      />
+    </div>
+    <div class="content">
+      <div class="sort-and-filters">
+        <div class="filters">
+          <div v-for="filter in getUserFilters" :key="filter">
+            <span>{{ filter }}</span>
+            <i @click="clearFilter(filter)">&times</i>
+          </div>
+          <div
+            v-if="getUserFilters.length > 0"
+            class="clear-filter"
+            @click="clearAllFilters"
+          >
+            Clear Filters
+          </div>
+        </div>
+        <div class="sort">
+          <div>
+            <div class="icons">
+              <i>
+                <fa icon="long-arrow-alt-down" />
+              </i>
+              <i>
+                <fa icon="long-arrow-alt-up" />
+              </i>
+            </div>
+            <span>{{ $t(sortCaption) }}</span>
+          </div>
+          <ul>
+            <li @click="sorting('1')">{{ $t('lowest_price') }}</li>
+            <li @click="sorting('2')">{{ $t('highest_price') }}</li>
+            <li @click="sorting('3')">{{ $t('lowest_mileage') }}</li>
+            <li @click="sorting('4')">{{ $t('highest_mileage') }}</li>
+            <li @click="sorting('6')">{{ $t('oldest_model') }}</li>
+            <li @click="sorting('5')">{{ $t('newest_model') }}</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="cars"
+        v-infinite-scroll="nextPage"
+        infinite-scroll-disabled="loading"
+        infinite-scroll-distance="500"
+      >
+        <AmCarCard v-for="car in cars" :key="car._id" :car="car" />
+      </div>
+    </div>
+  </div>
+</div>

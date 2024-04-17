@@ -1,0 +1,43 @@
+<section class="pre-approved">
+  <div class="hero">
+    <div class="wrapper">
+      <h1 class="title">
+        <span>{{ $t('receive_a') }}</span>
+        <span>{{ $t('pre_approval') }}</span>
+        <span>{{ $t('in') }} <strong class="five">5</strong> {{ $t('minutes') }}</span>
+      </h1>
+      <div class="apply">
+        <a href="#financing_form">{{ $t('hero-b') }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="buying">
+    <div class="wrapper">
+      <div class="steps">
+        <div>
+          <span class="number">1</span>
+          <h3>{{ $t('hero-item3-t') }}</h3>
+
+        </div>
+        <div>
+          <span class="number">2</span>
+          <h3>{{ $t('hero-item1-t') }}</h3>
+
+        </div>
+        <div class="green">
+          <span class="number white">3</span>
+          <h3 class="white">{{ $t('hero-item2-t') }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="financing-widget">
+    <div class="wrapper" id="financing_form">
+      <div id="ez_leads_financing"></div>
+    </div>
+  </div>
+  <script
+    async
+    type="application/javascript"
+    :src="`${api_url}/financing.js`"></script>
+</section>

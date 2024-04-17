@@ -1,0 +1,26 @@
+{
+  "en": {
+    "hero-t": "Contact Us",
+    "hero-p": "Would you like to hear from us? We would love to hear from you.",
+    "section1-t": "Leave us a message",
+    "first_name": "First Name",
+    "middle_name": "Middle Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "comments": "Comments",
+    "btn_send": "Send"
+  },
+  "es": {
+    "hero-t": "Contáctenos",
+    "hero-p": "¿Le gustaría saber de nosotros? A nosotros nos encantaría  saber de usted",
+    "section1-t": "¡Déjanos un Mensaje!",
+    "first_name": "Nombre",
+    "middle_name": "Segundo Nombre",
+    "last_name": "Apellidos",
+    "email": "Correo",
+    "phone": "Telefono",
+    "comments": "Comentarios",
+    "btn_send": "Enviar"
+  }
+}

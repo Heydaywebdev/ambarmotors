@@ -1,0 +1,12 @@
+
+<section class="am-slider">
+  <carousel :per-page="1" :mouse-drag="false" :autoplay="true" :autoplayTimeout="5000" :loop="true">
+    <slide v-for="item in list" :key="item._id">
+      <div class="item">
+        <p>{{item.text}}</p>
+        <h3>{{item.autor}}</h3>
+      </div>
+    </slide>
+  </carousel>
+</section>
+

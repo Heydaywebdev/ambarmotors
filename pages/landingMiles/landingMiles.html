@@ -1,0 +1,60 @@
+
+<section class="landing-miles">
+  <section class="hero">
+    <div class="wrapper">
+      <div class="left">
+        <h1>{{$t('hero-t')}}</h1>
+        <p>{{$t('hero-sub-t')}}</p>
+        <nuxt-link :to="localePath('inventory')" >
+          <AmButton
+            :type="'custom'"
+            :bg="'white'"
+            :color="'#00520a'"
+            :size="'m'"
+            textSize="uppercase"
+            fw="bold"
+            :text="$t('hero-b')" />
+        </nuxt-link>
+
+      </div>
+    </div>
+  </section>
+  <section class="section1">
+    <div class="wrapper">
+      <div class="header">
+        <h2>{{$t('section1-t')}}</h2>
+        <p>{{$t('section1-p')}}</p>
+      </div>
+      <div class="content">
+        <div class="left">
+          <div class="steps">
+            <div>
+              <i><img src="/home/icons/cosigner.svg" alt=""></i>
+              <h3>{{$t('section1-item1-t')}}</h3>
+              <p>{{$t('section1-item1-p')}}</p>
+            </div>
+            <div>
+              <i><img src="/home/icons/waranty.svg" alt=""></i>
+              <h3>{{$t('section1-item2-t')}}</h3>
+              <p>{{$t('section1-item2-p')}}</p>
+            </div>
+            <div>
+              <i><img src="/home/icons/engine.svg" alt=""></i>
+              <h3>{{$t('section1-item3-t')}}</h3>
+              <p>{{$t('section1-item3-p')}}</p>
+            </div>
+            <div>
+              <i><img src="/home/icons/referido.svg" alt=""></i>
+              <h3>{{$t('section1-item4-t')}}</h3>
+              <p>{{$t('section1-item4-p')}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <img src="/sell/offer.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+

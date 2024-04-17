@@ -1,0 +1,26 @@
+
+<section class="am-hero">
+  <div class="wrapper">
+    <div class="left">
+      <h1 class="title-1">{{$t('title1')}}</h1>
+      <h1 class="title-2">{{$t('title2')}}</h1>
+      <div class="search">
+        <AmSearchCar display='simple'/>
+      </div>
+      <div class="browse-all">
+        <nuxt-link :to="localePath('inventory')" class="buy-btn">
+          {{$t('buy')}}
+        </nuxt-link>
+        <span class="divider">-OR-</span>
+        <nuxt-link :to="localePath('sell')" class="sell-btn">
+          {{$t('sell')}}
+        </nuxt-link>
+      </div>
+    </div>
+    <div class='right'>
+      <img src="@/assets/hero/car.png" alt="white vehicle">
+    </div>
+  </div>
+</section>
+
+

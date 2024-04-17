@@ -1,0 +1,285 @@
+@import "~/scss/main.scss";
+.am-car-compare {
+  //height: 100%;
+  display: flex;
+  flex-direction: column;
+  .square {
+    width: 100%;
+    height: 323px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+    @media #{$media-movil} {
+      width: 100%;
+      height: 211px;
+      border-radius: 5px;
+    }
+    @media #{$media-iphone} {
+      width:100%;
+    }
+    &::after {
+      content: '';
+      background: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 61%, rgba(0, 0, 0, 0.49) 76%, rgba(0, 0, 0, 0.61) 99%);
+      //background: linear-gradient(-179deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.09) 63%, rgba(0,0,0,0.57) 72%, rgba(0,0,0,0.69) 84%, rgba(0,0,0,0.76) 100%);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .save,
+    .delete {
+      position: absolute;
+      z-index:999999;
+    }
+
+    .save {
+      left: 15px;
+      top: 15px;
+
+      i {
+        background: white;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        cursor: pointer;
+        color: #D5D5D5;
+        @media #{$media-movil} {
+          width: 26px;
+          height: 26px;
+          font-size: 1em;
+        }
+
+        &.selected {
+          animation: scale .4s;
+          color: var(--primary-green-ligth);
+        }
+      }
+    }
+
+    .delete {
+      background: white;
+      border-radius: 50%;
+      right: 15px;
+      top: 15px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      cursor: pointer;
+      color: red;
+      align-items: center;
+      justify-content: center;
+      font-size: .8em;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+    }
+
+    figure {
+      overflow: hidden;
+      width: 100%;
+      margin: 0;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-position: -100px;
+        filter: saturate(1.1) brightness(140%);
+        display: block;
+        transition: ease-in-out .3s;
+        @media #{$media-movil} {
+          object-position: center;
+        }
+      }
+    }
+
+    &.first-car {
+      width: 100vw;
+      border-radius:0;
+      height:335px;
+      margin-bottom:20px;
+
+      .car{
+        &__title {
+          span {
+            font-size: 1.5em;
+          }
+        }
+        &__price-and-payment {
+          font-size:1.3em;
+        }
+      }
+
+    }
+    .car {
+      padding: 15px;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+      z-index: 99999;
+      left: 0;
+      flex-direction: column;
+      color: white;
+      top: 0;
+
+      &__title {
+        border-bottom: 1px solid #969696;
+        display: flex;
+        flex-direction: column;
+        @media #{$media-movil} {
+          font-size: .7em;
+        }
+
+        span {
+          &:first-child {
+            font-size: .8em;
+            color: var(--primary-orange);
+            font-weight: bold;
+            text-transform: uppercase;
+            @media #{$media-movil} {
+              font-size: .8em;
+            }
+          }
+
+          &:last-child {
+            text-transform: uppercase;
+            @media #{$media-movil} {
+              font-size: 1.2em;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      &__price-and-payment {
+        display: flex;
+        justify-content: space-between;
+
+        & > div {
+          span {
+            &:first-child {
+              font-size: .7em;
+              color: #D9D9D9;
+              @media #{$media-movil} {
+                font-size: .6em;
+              }
+            }
+          }
+
+          &.price {
+            text-align: right;
+          }
+        }
+
+        .payment {
+          span:last-child {
+            font-weight: bold;
+            @media #{$media-movil} {
+              font-size: .8em;
+            }
+
+          }
+        }
+
+        .price {
+          span:last-child {
+            @media #{$media-movil} {
+              font-size: .7em;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+  .equipments{
+    width: 100%;
+    height: 507px;
+    overflow: auto;
+    background: white;
+    border: 1px solid var(--border);
+    box-shadow: var(--box-shadow-gray);
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 15px;
+    h3{
+      font-size: 1.6em;
+      color: var(--primary-green);
+      margin-bottom: 10px;
+    }
+    span{
+      margin: 10px 0;
+      width: 100%;
+      display: block;
+      color: var(--gray-border);
+      strong{
+        text-transform: uppercase;
+        font-size: 1.1em;
+      }
+      &.lines{
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1.4px solid var(--border);
+      }
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+
+}
+
+@media #{$media-movil} {
+  .am-car-compare{
+    .equipments{
+      h3{
+        font-size: 1.3em;
+      }
+      span{
+        strong{
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+@media #{$media-iphone} {
+  .am-car-compare{
+    .equipments{
+      h3{
+        font-size: 1.3em;
+      }
+      span{
+        strong{
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+@keyframes scale {
+  0%{
+    font-size:1em;
+  }
+  25%{
+    font-size:1.3em;
+  }
+  50%{
+    font-size:1em;
+  }
+  75%{
+    font-size:1.3em;
+  }
+  100%{
+    font-size: 1.3em;
+  }
+}

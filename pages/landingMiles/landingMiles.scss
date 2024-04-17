@@ -1,0 +1,32 @@
+@import "~/scss/main.scss";
+
+.landing-miles {
+  .hero {
+    background: url('/landings/200miles//bg-hero.jpg') no-repeat top / cover;
+    p{
+      margin-bottom:20px;
+      color:white;
+    }
+    @media #{$media-movil, $media-iphone} {
+      background: var(--primary-green);
+
+      .left {
+        text-align: center;
+        align-items: center;
+
+        a {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    @extend %landing-hero;
+  }
+
+  .section1 {
+    padding: 40px 0;
+
+    .wrapper {
+      @extend %steps;
+    }
+  }
+}

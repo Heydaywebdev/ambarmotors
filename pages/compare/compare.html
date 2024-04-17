@@ -1,0 +1,50 @@
+<section class="compare">
+  <div class="compare__container wrapper">
+    <div class="header">Comparing {{Compared.length}} Cars</div>
+    <div class="cars">
+      <div class="cars__item" v-for="car in Compared" :key="car._id" v-if="car">
+        <div class="auto">
+          <AmComparedCarCard  :car="car"/>
+        </div>
+        <div class="icons">
+          <div class="item">
+            <figure>
+              <img src="/compare/Milles.svg" alt="">
+            </figure>
+            <span class="lines" v-if="car.Mileage">{{car.Mileage}} Miles</span>
+          </div>
+          <div class="item">
+            <figure>
+              <img src="/compare/door.svg" alt="">
+            </figure>
+            <span class="lines" v-if="car.Doors && car.Body">{{car.Body}} | {{car.Doors}} doors</span>
+          </div>
+          <div class="item">
+            <figure>
+              <img src="/compare/color.svg" alt="">
+            </figure>
+            <span class="lines" v-if="car.IntColor && car.IntColor.color">{{car.IntColor.color}}</span>
+          </div>
+          <div class="item">
+            <figure>
+              <img src="/compare/Automatic.svg" alt="">
+            </figure>
+            <span class="lines" v-if="car.Transmission">{{car.Transmission}}</span>
+          </div>
+          <div class="item">
+            <figure>
+              <img src="/compare/engine.svg" alt="">
+            </figure>
+            <span class="lines" v-if="car.Engine">{{car.Engine}}</span>
+          </div>
+          <div class="item">
+            <figure>
+              <img src="/compare/oil.svg" alt="">
+            </figure>
+            <span class="lines" v-if="car.ExtColor && car.ExtColor.color">{{car.ExtColor.color}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

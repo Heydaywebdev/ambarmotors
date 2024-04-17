@@ -1,0 +1,18 @@
+.landing-cosigner {
+  @import "~/scss/main.scss";
+
+  .hero {
+    background: url('/landings/cosigner//bg-hero.jpg') no-repeat center / cover;
+    @media #{$media-movil, $media-iphone} {
+      background: var(--primary-green);
+
+    }
+    @extend %landing-hero;
+  }
+
+  .section1 {
+    padding: 40px 0;
+    @extend %steps;
+  }
+
+}

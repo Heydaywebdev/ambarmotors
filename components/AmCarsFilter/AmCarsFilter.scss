@@ -1,0 +1,191 @@
+
+.am-cars-filter {
+  background: white;
+  overflow: hidden;
+  font-weight: 500;
+
+  .filter {
+    section {
+      min-height: 45px;
+      padding: 0 15px;
+      border-bottom: 1px solid #e8eff9;
+      display: flex;
+      flex-direction: column;
+
+      .more-and-less {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        background: white;
+
+        span {
+          cursor: pointer;
+          color: var(--primary-orange);
+        }
+      }
+
+      & > ul {
+        overflow: hidden;
+        margin-left: 10px;
+
+        &.collapse {
+          height: 100%;
+        }
+
+        li {
+          cursor: pointer;
+          display: inline;
+
+          & > span {
+            margin-top: 10px;
+            display: block;
+
+            &:hover {
+              color: var(--color-orange);
+            }
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+
+            & > li {
+              &:hover {
+                color: var(--color-orange);
+              }
+
+              &.selected {
+                color: var(--primary-orange);
+              }
+            }
+          }
+        }
+      }
+
+      &.makes-and-models {
+        ul {
+          li {
+            margin-top: 5px;
+          }
+
+        }
+      }
+
+      &.body {
+        .all-body {
+          background-image: var(--color-gray-light);
+          color: var(--color-blue-text);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 35px;
+          cursor: pointer;
+        }
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, 100px);
+          justify-content: space-between;
+          grid-gap: 10px;
+          margin: 20px 0;
+
+          li {
+            background: var(--body-img) no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+
+            &.selected {
+              img.white {
+                display: none;
+              }
+
+              img.yellow {
+                display: block;
+              }
+            }
+
+            img {
+              &.white {
+                display: block;
+              }
+
+              &.yellow {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &.years {
+        .all-years {
+          background: var(--color-gray-light);
+          color: var(--color-blue-text);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 35px;
+          cursor: pointer;
+        }
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, 100px);
+          justify-content: space-between;
+          grid-gap: 10px;
+          margin: 20px 0;
+
+          li {
+            border: 1px solid var(--color-border-gray);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+
+            &.selected {
+              color: var(--color-orange);
+              border: 1px solid var(--color-orange);
+            }
+
+            img {
+              display: block;
+            }
+          }
+        }
+      }
+
+      &.mileage {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__title {
+      color: var(--primary-green);
+      height: 45px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--color-orange);
+      }
+    }
+  }
+}
+
+.show{
+  display: flex !important;
+}
+.hide{
+  display:none !important;
+}

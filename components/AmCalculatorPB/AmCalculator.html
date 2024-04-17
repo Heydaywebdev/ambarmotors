@@ -1,0 +1,84 @@
+
+<section class="am-calculator">
+  <div class="title">
+    <h1>{{$t('title1')}}</h1>
+  </div>
+  <div class="am-container wrapper">
+    <div class="left">
+        <div class="credit calc-section">
+          <div class="title">
+            <span>{{$t('credit-title')}}</span>
+          </div>
+          <div class="item-container" id="item-container">
+            <div class="item"  @click="setRate(24)">{{$t('bad')}}</div>
+            <div class="item" @click="setRate(17.5)">{{$t('fair')}}</div>
+            <div class="item" @click="setRate(12)">{{$t('good')}}</div>
+            <div class="item" @click="setRate(7.5)">{{$t('very-good')}}</div>
+            <div class="item selected" @click="setRate(3.5)">{{$t('excellent')}}</div>
+          </div>
+        </div>
+        <div class="downpayment calc-section">
+          <div class="title">
+            <span>{{$t('down')}}</span>
+          </div>
+          <vue-slider v-if="downOptions"
+            v-model="downpayment"
+            v-bind="downOptions"
+          ></vue-slider>
+          <div class="labels">
+            <span>$0 usd</span>
+            <span>$25.000 usd</span>
+          </div>
+        </div>
+        <div class="years calc-section">
+          <div class="title">
+            <span>{{$t('years')}}</span>
+          </div>
+          <vue-slider v-if="yearOptions"
+            v-model="years"
+            v-bind="yearOptions"
+          ></vue-slider>
+          <div class="labels">
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+          </div>
+        </div>
+    </div>
+    <div class="right">
+      <div class="details">
+        <h2>{{$t('details')}}</h2>
+        <div class="body">
+          <div class="am-section">
+            <p>{{$t('vehicle-price')}}</p>
+            <span>{{getFormattedNumber(price)}} usd</span>
+          </div>
+          <div class="am-section">
+            <p>{{$t('credit-title')}}</p>
+            <span>{{rate}} %</span>
+          </div>
+          <div class="am-section">
+            <p>{{$t('down')}}</p>
+            <span>{{getFormattedNumber(downpayment)}} usd</span>
+          </div>
+          <div class="am-section">
+            <p>{{$t('years')}}</p>
+            <span>{{years}} years</span>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <p>{{$t('result')}}</p>
+        <span>{{getMonthlyPayment()}} {{$t('per-month')}}</span>
+      </div>
+      <div class="pre-approved">
+        <p>{{$t('pre-app')}}</p>
+        <a href="" class="link-button">{{$t('inventory')}}</a>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+

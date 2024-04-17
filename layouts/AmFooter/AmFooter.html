@@ -1,0 +1,95 @@
+<section class="am-footer" v-if="!isInventory">
+  <div class="links wrapper">
+    <div>
+      <div class="logo">
+        <img src="/logo-large.png" alt="">
+      </div>
+      <div class="socials">
+        <ul>
+          <li>
+            <a href='https://www.facebook.com/ambarmotorsoficial' target='_blank'><fa :icon="['fab', 'facebook-f']" /></a>
+          </li>
+          <li>
+            <a href='https://www.instagram.com/ambarmotors' target='_blank'><fa :icon="['fab', 'instagram']" /></a>
+          </li>
+          <li>
+            <a href='https://www.youtube.com/user/ambarmotorsin/videos' target='_blank'><fa :icon="['fab', 'youtube']" /></a>
+          </li>
+          <li>
+            <a href='https://twitter.com/ambarmotors' target='_blank'><fa :icon="['fab', 'twitter']" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h4>{{ $t('ambarmotors-title') }}</h4>
+      <ul>
+        <li>
+          <nuxt-link :to="localePath('inventory')">
+            {{ $t('ambarmotors-t1') }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('sell')">
+            {{ $t('ambarmotors-t2') }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('pre-approved')">
+            {{ $t('ambarmotors-t3') }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>{{ $t('about-title') }}</h4>
+      <ul>
+        <li>
+          <nuxt-link :to="localePath('about')">
+            {{ $t('about-t1') }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('services')">
+            {{ $t('about-t2') }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('assurance')">
+            {{ $t('about-t3') }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>{{ $t('contact-title') }}</h4>
+      <ul>
+        <li>{{ $t('contact-t1') }}</li>
+        <li>
+          <nuxt-link :to="localePath('contact')">
+            {{ $t('contact-t2') }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>{{ $t('company-title') }}</h4>
+      <ul>
+        <li>
+          <nuxt-link :to="localePath('termsCondition')">
+            {{ $t('company-t1') }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('privacyPolicy')">
+            {{ $t('company-t2') }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright wrapper">
+    <p>Copyright &copy 2019. Ambar Motors INC. All Rights Reserved</p>
+    <p>Powered by: <strong>AMBAR WEB DEV LLC</strong></p>
+  </div>
+</section>

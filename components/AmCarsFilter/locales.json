@@ -1,0 +1,31 @@
+{
+  "en" : {
+    "make_model": "Make & Model",
+    "all_makes" : "All Makes",
+    "all_years": "All Years",
+    "all_bodies": "All Bodies",
+    "body_type": "Body Type",
+    "year": "Year",
+    "price": "Price",
+    "mileage": "Mileage",
+    "all": "All",
+    "all_f": "All",
+    "all_m": "All",
+    "search": "Search"
+  },
+  "es": {
+    "make_model": "Marca & Modelo",
+    "all_makes" : "Todas las marcas",
+    "all_years": "Todos los Años",
+    "all_bodies": "Todas las Carrocerias",
+    "body_type": "Carroceria",
+    "year": "Año",
+    "price": "Precio",
+    "mileage": "Millaje",
+    "all" : "Todo",
+    "all_f": "Todas",
+    "all_m": "Todos",
+    "search": "Buscar"
+  }
+
+}

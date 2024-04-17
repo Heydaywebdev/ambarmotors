@@ -1,0 +1,114 @@
+<section class="landing-no-social">
+  <section class="hero">
+    <div class="wrapper">
+      <h1 class="title">
+        <span>{{$t('heroTitle1')}}</span>
+        <span>{{$t('am')}}</span>
+        <span>{{$t('heroTitle2')}}</span>
+        <span>{{$t('heroTitle3')}}</span>
+      </h1>
+      <p class="subtitle">{{ $t('heroSubtitle') }}</p>
+      <a href="#form-cta" class="cta">
+        {{ $t('apply') }}
+      </a>
+    </div>
+  </section>
+  <section class="intro">
+    <div class="wrapper">
+      <div class="left">
+        <h2 class="title">{{ $t('introTitle') }}</h2>
+        <p>{{ $t('introParagraph') }}</p>
+      </div>
+      <img src="/sell/car-green.png" alt="green car">
+    </div>
+  </section>
+  <section class="features">
+    <div class="wrapper">
+      <h2 class="title">{{ $t('featuresAndBenefitsTitle') }}</h2>
+      <ul class="list">
+        <li>
+          <h3>{{ $t('feature1-t') }}</h3>
+          <p>{{ $t('feature1-d') }}</p>
+        </li>
+        <li>
+          <h3>{{ $t('feature2-t') }}</h3>
+          <p>{{ $t('feature2-d') }}</p>
+        </li>
+        <li>
+          <h3>{{ $t('feature3-t') }}</h3>
+          <p>{{ $t('feature3-d') }}</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="services">
+    <div class="wrapper">
+      <h2 class="title">{{ $t('additionalServicesTitle') }}</h2>
+      <ul class="list">
+        <li>
+          <h3>{{ $t('service1-t') }}</h3>
+          <p>{{ $t('service1-d') }}</p>
+        </li>
+        <li>
+          <h3>{{ $t('service2-t') }}</h3>
+          <p>{{ $t('service2-d') }}</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="form-section" id="form-cta">
+    <div class="wrapper">
+      <h2 class="title">{{ $t('ctaTitle') }}</h2>
+      <p>{{ $t('ctaParagraph') }}</p>
+      <form class="form" @submit.prevent="sendLandingForm">
+        <div>
+          <input type="text" v-validate="'alpha|required'" v-model="form.FirstName" name="first_name"
+                 :placeholder="$t('first_name')">
+          <span class="validation_error">{{ errors.first('first_name') }}</span>
+        </div>
+
+        <div>
+          <input type="text" v-validate="'alpha'" v-model="form.MiddleName" name="middle_name"
+                 :placeholder="$t('middle_name')">
+          <span class="validation_error">{{ errors.first('middle_name') }}</span>
+        </div>
+
+        <div>
+          <input type="text" v-validate="'alpha_spaces|required'" v-model="form.LastName" name="last_name"
+                 :placeholder="$t('last_name')">
+          <span class="validation_error">{{ errors.first('last_name') }}</span>
+        </div>
+
+        <div>
+          <input type="text" v-validate="'email|required'" v-model="form.Email" name="email" :placeholder="$t('email')">
+          <span class="validation_error">{{ errors.first('email') }}</span>
+        </div>
+
+        <div>
+          <input type="text" v-validate="'digits:10|required'" v-model="form.Phone" name="phone"
+                 :placeholder="$t('phone')">
+          <span class="validation_error">{{ errors.first('phone') }}</span>
+        </div>
+
+        <div class="textarea">
+          <textarea name="" id="" cols="30" rows="10" v-validate="'alpha_spaces|required'" v-model="form.Comments"
+                    name="comments" :placeholder="$t('comments')"></textarea>
+          <span class="validation_error">{{ errors.first('comments') }}</span>
+        </div>
+        <div class="action">
+          <AmButton
+            border="0"
+            type="custom"
+            width="100%"
+            size="l"
+            bg="var(--primary-orange)"
+            fw="bold" color="white"
+            textSize="uppercase"
+            :text="$t('apply')"/>
+        </div>
+      </form>
+
+    </div>
+  </section>
+</section>
+

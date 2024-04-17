@@ -1,0 +1,15 @@
+@import "~/scss/main.scss";
+.am-car-recently {
+  margin:30px 0;
+  .desktop{
+    @media #{$media-movil, $media-iphone} {
+      display: none;
+    }
+  }
+  .mobile {
+    display: none;
+    @media #{$media-movil, $media-iphone} {
+      display: block;
+    }
+  }
+}

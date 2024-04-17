@@ -1,0 +1,34 @@
+{
+  "en": {
+    "hero-t": "Exclusive Service",
+    "hero-p": "We care about quality service",
+    "hero-item1-t": "Battery replacement",
+    "hero-item2-t": "Brake check",
+    "hero-item3-t": "Oil change",
+    "hero-item1-p": "Ambar Motors cares about the maintenance of your battery",
+    "hero-item2-p": "It is a good idea to have your brakes serviced at least once a year",
+    "hero-item3-p": "Oil change is crucial to your car",
+    "section1-t": "Do you know why it is necessary to have the battery in good condition in your vehicle?",
+    "section2-t": "Do you know why it’s important to change the brakes?",
+    "section3-t": "Why is an oil change necessary?",
+    "section1-p": "A vehicle battery has several important functions, such as storing energy and providing power to the starter, ignition system, fuel system and virtually all other electrical components during start-up",
+    "section2-p": "If your car requires this service, Ambar Motors makes sure your brakes are serviced according to your vehicle manufacturer's recommendations, including all replacement parts such as pads, drums and/or rotors",
+    "section3-p": "Oil changes are one of the basic services a car needs and wants, as oil will lose properties over time and miles, becoming more liquid and less effective when it comes to lubricating, cleaning action cooling and sealing the engine"
+  },
+  "es": {
+    "hero-t": "Servicio Exclusivo",
+    "hero-p": "Nos preocupamos por un servicio de calidad",
+    "hero-item1-t": "Cambio de batería",
+    "hero-item2-t": "Cambio de frenos",
+    "hero-item3-t": "Cambio de aceite",
+    "hero-item1-p": "Nos preocupamos por el mantenimiento de su batería",
+    "hero-item2-p": "Es importante revisar frenos al menos una vez al año",
+    "hero-item3-p": "El cambio de aceite es vital para su vehículo",
+    "section1-t": "¿Sabes por qué es conveniente tener la batería en buenas condiciones en los vehículos?",
+    "section2-t": "¿Sabes por qué es importante el cambio de frenos?",
+    "section3-t": "¿Por qué es necesario un cambio de aceite?",
+    "section1-p": "La batería de un vehículo tiene varias funciones importantes, como el almacenamiento de energía y la alimentación del arrancador, el sistema de encendido, el sistema de combustible y prácticamente todos los demás componentes eléctricos durante la puesta en marcha",
+    "section2-p": "Si su automóvil requiere este servicio, Ambar Motors se asegura de que sus frenos sean atendidos de acuerdo con las recomendaciones del fabricante de su vehículo, incluidas todas las piezas de repuesto, como almohadillas, tambores y / o rotores",
+    "section3-p": "El cambio de aceite es uno de los servicios básicos que un automóvil necesita, ya que el aceite perderá propiedades a lo largo del tiempo y millas, se volverá más líquido y menos efectivo cuando se trata de lubricar, limpiar la acción de enfriamiento y sellar el motor"
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Enfocados en usted</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="78.125%" y1="66.1762882%" x2="21.875%" y2="25.1738461%" id="linearGradient-1">
+            <stop stop-color="#00520A" offset="0%"></stop>
+            <stop stop-color="#2DA401" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Enfocados-en-usted" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M13.75,15.5 L11.25,15.5 C7.7975,15.5 5,18.2975 5,21.75 C5,22.44125 5.55875,23 6.25,23 L18.75,23 C19.44125,23 20,22.44125 20,21.75 C20,18.2975 17.2025,15.5 13.75,15.5 Z M7.73,20.5 C8.24625,19.0475 9.61875,18 11.25,18 L13.75,18 C15.38125,18 16.75375,19.0475 17.27,20.5 L7.73,20.5 Z M12.5,13 C14.57125,13 16.25,11.32125 16.25,9.25 L16.25,6.75 C16.25,4.67875 14.57125,3 12.5,3 C10.42875,3 8.75,4.67875 8.75,6.75 L8.75,9.25 C8.75,11.32125 10.42875,13 12.5,13 Z M11.25,6.75 C11.25,6.05875 11.80875,5.5 12.5,5.5 C13.19125,5.5 13.75,6.05875 13.75,6.75 L13.75,9.25 C13.75,9.94125 13.19125,10.5 12.5,10.5 C11.80875,10.5 11.25,9.94125 11.25,9.25 L11.25,6.75 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

@@ -1,0 +1,164 @@
+<section class="test-drive">
+  <div class="wrapper">
+    <div class="content">
+      <div id="ez_leads_testdrive"></div>
+<!--      <div class="left">-->
+<!--        <h1>{{$t('test-t')}}</h1>-->
+<!--        <form @submit.prevent="sendTestDrive">-->
+
+<!--          <div>-->
+<!--            <input type="text" v-validate="'alpha|required'" v-model="form.FirstName" name="first_name"-->
+<!--                   :placeholder="$t('first_name')">-->
+<!--            <span class="validation_error">{{ errors.first('first_name') }}</span>-->
+<!--          </div>-->
+
+<!--          <div>-->
+<!--            <input type="text" v-validate="'alpha'" v-model="form.MiddleName" name="middle_name"-->
+<!--                   :placeholder="$t('middle_name')">-->
+<!--            <span class="validation_error">{{ errors.first('middle_name') }}</span>-->
+<!--          </div>-->
+
+<!--          <div>-->
+<!--            <input type="text" v-validate="'alpha|required'" v-model="form.LastName" name="last_name"-->
+<!--                   :placeholder="$t('last_name')">-->
+<!--            <span class="validation_error">{{ errors.first('last_name') }}</span>-->
+<!--          </div>-->
+
+<!--          <div>-->
+<!--            <input type="text" v-validate="'email|required'" v-model="form.Email" name="email"-->
+<!--                   :placeholder="$t('email')">-->
+<!--            <span class="validation_error">{{ errors.first('email') }}</span>-->
+<!--          </div>-->
+
+<!--          <div>-->
+<!--            <input type="text" v-validate="'digits:10|required'" v-model="form.Phone" name="phone"-->
+<!--                   :placeholder="$t('phone')">-->
+<!--            <span class="validation_error">{{ errors.first('phone') }}</span>-->
+<!--          </div>-->
+
+<!--          <div>-->
+<!--            <input type="date" v-validate="'required'" v-model="form.Date" name="date">-->
+<!--            <span class="validation_error">{{ errors.first('date') }}</span>-->
+<!--          </div>-->
+
+<!--          <div>-->
+<!--            <select v-validate="'required'" v-model="form.Hour" name="hour">-->
+<!--              <option selected>{{form.Hour}}</option>-->
+<!--              <option value="10:00 AM">10:00</option>-->
+<!--              <option value="10:30 AM">10:30</option>-->
+<!--              <option value="11:00 AM">11:00 AM</option>-->
+<!--              <option value="11:30 AM">11:30 AM</option>-->
+<!--              <option value="12:00 PM">12:00 PM</option>-->
+<!--              <option value="12:30 PM">12:30 PM</option>-->
+<!--              <option value="1:00 PM">1:00 PM</option>-->
+<!--              <option value="1:30 PM">1:30 PM</option>-->
+<!--              <option value="2:00 PM">2:00 PM</option>-->
+<!--              <option value="2:30 PM">2:30 PM</option>-->
+<!--              <option value="3:00 PM">3:00 PM</option>-->
+<!--              <option value="3:30 PM">3:30 PM</option>-->
+<!--              <option value="4:00 PM">4:00 PM</option>-->
+<!--              <option value="4:30 PM">4:30 PM</option>-->
+<!--              <option value="5:00 PM">5:00 PM</option>-->
+<!--              <option value="5:30 PM">5:30 PM</option>-->
+<!--              <option value="6:00 PM">6:00 PM</option>-->
+<!--              <option value="6:30 PM">6:30 PM</option>-->
+<!--              <option value="7:00 PM">7:00 PM</option>-->
+<!--              <option value="7:30 PM">7:30 PM</option>-->
+<!--              <option value="8:00 PM">8:00 PM</option>-->
+<!--            </select>-->
+<!--            <span class="validation_error">{{ errors.first('hour') }}</span>-->
+<!--          </div>-->
+
+<!--          <div>-->
+<!--            <select v-validate="'required'" v-model="form.Location" name="location">-->
+<!--              <option disabled selected>Select Location</option>-->
+<!--              <option :value="location._id" v-for="location in Company.Locations">{{location.Name}}</option>-->
+<!--            </select>-->
+<!--            <span class="validation_error">{{ errors.first('location') }}</span>-->
+<!--          </div>-->
+
+<!--          <div class="text-area">-->
+<!--            <textarea cols="30" rows="10" v-validate="'alpha_spaces|required'" v-model="form.Comments" name="comments"-->
+<!--                      :placeholder="$t('comments')"></textarea>-->
+<!--            <span class="validation_error">{{ errors.first('comments') }}</span>-->
+<!--          </div>-->
+
+<!--          <div>-->
+<!--            <AmButton :text="$t('btn_send')" size="xl" fw="bold" textSize="uppercase"></AmButton>-->
+<!--          </div>-->
+<!--        </form>-->
+<!--      </div>-->
+<!--      <div class="right">-->
+<!--        <figure>-->
+<!--          <img :src="getImageUrl(Car)" alt="">-->
+<!--        </figure>-->
+<!--        <p>{{$t('right-p')}}</p>-->
+<!--        <div class="overview">-->
+<!--          <ul class="specifications-list">-->
+<!--            <li>-->
+<!--              <img src="/details/icons/stock.svg" alt="icon-stock">-->
+<!--              <div class="info">-->
+<!--                <span>Stock</span>-->
+<!--                <span>{{Car.Stock}}</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <img src="/details/icons/car.svg" alt="">-->
+<!--              <div class="info">-->
+<!--                <span>Trim</span>-->
+<!--                <span>{{Car.Trim}}</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <img src="/details/icons/miles.svg" alt="icon-miles">-->
+<!--              <div class="info">-->
+<!--                <span>Mileage</span>-->
+<!--                <span>{{Car.Mileage}}</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <img src="/details/icons/transmission.svg" alt="icon-transmission">-->
+<!--              <div class="info">-->
+<!--                <span>Transmission</span>-->
+<!--                <span>{{Car.Transmission}}</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <img src="/details/icons/engine.svg" alt="icon-engine">-->
+<!--              <div class="info">-->
+<!--                <span>Engine</span>-->
+<!--                <span>{{Car.Engine}}</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <img src="/details/icons/color.svg" alt="icon-color">-->
+<!--              <div class="info">-->
+<!--                <span>Ext Color</span>-->
+<!--                <span>{{Car.ExtColor.color}}</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <img src="/details/icons/color.svg" alt="icon-color">-->
+<!--              <div class="info">-->
+<!--                <span>Int Color</span>-->
+<!--                <span>{{Car.IntColor.color}}</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <img src="/details/icons/doors.svg" alt="icon-doors">-->
+<!--              <div class="info">-->
+<!--                <span>Doors</span>-->
+<!--                <span>{{Car.Doors}}</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
+  </div>
+  <script
+    async
+    type="application/javascript"
+    :src="`${api_url}/testdrive.js`"></script>
+</section>
+

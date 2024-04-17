@@ -1,0 +1,103 @@
+<div class="inventory">
+  <div class="filters-and-cars">
+    <div class="filter" :class="showFilters ? 'show' : 'hide'">
+      <div v-if="showFilters" class="show-filters">
+        <div>
+          <i><fa icon="sliders-h" /></i>
+          <span>Filter</span>
+        </div>
+        <span @click="showFilters = false">&times</span>
+      </div>
+      <div class="wrapper am-slim-scroll">
+        <AmCarsFilter
+          :makes="filters.makes"
+          :models="filters.models"
+          :years="filters.years"
+          :bodies="filters.bodies"
+          :onFilterChanged="onFilterChanged"
+        />
+      </div>
+    </div>
+    <div class="content" :class="{'fix-margin': showFilters}">
+      <div class="header">
+        <div @click="showFilters = true" class="show-filters" v-show="!showFilters">
+          <i><fa icon="sliders-h" /></i>
+          <span>Filter</span>
+        </div>
+        <div class="filters">
+          <div v-for="filter in getUserFilters" :key="filter">
+            <span>{{ filter }}</span>
+            <i @click="clearFilter(filter)">&times</i>
+          </div>
+          <div
+            v-if="getUserFilters.length > 0"
+            class="clear-filter"
+            @click="clearAllFilters"
+          >
+            Clear Filters
+          </div>
+        </div>
+        <div class="car-compare" :class="{'active': getCompared.length > 1}">
+          <div class="icons"><i>
+            <fa icon="long-arrow-alt-down"/>
+          </i>
+            <i>
+              <fa icon="long-arrow-alt-up"/>
+            </i>
+          </div>
+          <span v-if="getCompared.length <= 1" @click="toggleCompare">{{$t('compare')}}</span>
+          <span v-if="getCompared.length > 1" @click="goToCompare">{{$t('view-compare')}} ({{getCompared.length}})</span>
+        </div>
+        <span class="separate"></span>
+        <div class="sort">
+          <div>
+            <div class="icons">
+              <i><fa icon="filter"/></i>
+            </div>
+            Sort
+            <span>{{ $t(sortCaption) }}</span>
+          </div>
+          <ul>
+            <li @click="sorting('1')">{{ $t('lowest_price') }}</li>
+            <li @click="sorting('2')">{{ $t('highest_price') }}</li>
+            <li @click="sorting('3')">{{ $t('lowest_mileage') }}</li>
+            <li @click="sorting('4')">{{ $t('highest_mileage') }}</li>
+            <li @click="sorting('6')">{{ $t('oldest_model') }}</li>
+            <li @click="sorting('5')">{{ $t('newest_model') }}</li>
+          </ul>
+        </div>
+        <div class="filters-mobile">
+          <div v-for="filter in getUserFilters" :key="filter">
+            <span>{{ filter }}</span>
+            <i @click="clearFilter(filter)">&times</i>
+          </div>
+          <div
+            v-if="getUserFilters.length > 0"
+            class="clear-filter"
+            @click="clearAllFilters"
+          >
+            Clear Filters
+          </div>
+        </div>
+      </div>
+      <div class="cars">
+        <h1 class="title">{{$t('title-h1')}}</h1>
+        <div class="cars__first-car">
+          <AmCarCard ref="setCar" :car="firstCar" :firstCar="true" v-if="firstCar"/>
+        </div>
+        <div
+          class="cars__content"
+          v-infinite-scroll="nextPage"
+          infinite-scroll-disabled="loading"
+          infinite-scroll-distance="500"
+        >
+          <AmCarCard v-for="car in cars" :key="car._id" :car="car" v-if="car"/>
+        </div>
+      </div>
+      <!--<AmPagination-->
+        <!--:total-pages="+totalPages"-->
+        <!--:selected-page="+currentPage"-->
+      <!--&gt;</AmPagination>-->
+    </div>
+  </div>
+</div>

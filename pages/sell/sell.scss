@@ -1,0 +1,378 @@
+@import "~/scss/main.scss";
+
+.sell {
+  .hero {
+    background: #fff;
+    height: 600px;
+    @media #{$media-movil, $media-iphone} {
+      height: 100%;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 600px;
+      align-items: center;
+      height: 100%;
+      @media #{$media-movil, $media-iphone} {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        justify-content: flex-start;
+      }
+
+      .left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        @media #{$media-movil, $media-iphone} {
+          padding: 30px 0;
+          align-items: center;
+          text-align: center;
+          .title {
+            margin-bottom: 20px;
+          }
+        }
+
+        .title {
+          font-size: 18px;
+          line-height: 25px;
+          letter-spacing: 1.25px;
+          font-weight: 400;
+          text-transform: uppercase;
+
+        }
+
+        .description {
+          margin: 0 0 25px;
+          font-size: 3.5rem;
+          letter-spacing: 1px;
+          font-style: italic;
+          @media #{$media-movil, $media-iphone}{
+            font-size: 2.5rem;
+            line-height: 2rem;
+          }
+        }
+
+      }
+
+      .right {
+        border-radius: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+          width: 87%;
+        }
+
+        @media #{$media-movil, $media-iphone} {
+          justify-content: center;
+          img {
+            margin-top: 1.5rem;
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-items {
+    @media #{$media-movil, $media-iphone} {
+      height: 100%;
+    }
+
+    .wrapper {
+      padding: 1.5rem;
+      position: relative;
+      @media #{$media-movil, $media-iphone} {
+        top: 0;
+        height: 100%;
+      }
+
+      .steps {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        @media #{$media-movil, $media-iphone} {
+          grid-template-columns: 1fr;
+        }
+
+        & > div {
+          height: 100%;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          @media #{$media-movil, $media-iphone} {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+
+          figure {
+            @media #{$media-movil, $media-iphone} {
+              margin: 0;
+              display: flex;
+              justify-content: center;
+            }
+
+            img {
+              @media #{$media-movil, $media-iphone} {
+                width: 50px;
+              }
+              width: 100px;
+            }
+          }
+
+          h3 {
+            color: black;
+            font-size: 1.2rem;
+            margin-top: 1.3rem;
+            height: 50px;
+            font-weight: bold;
+          }
+
+          p {
+            font-weight: 500;
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .section1 {
+    padding: 50px 0;
+    @media #{$media-movil, $media-iphone} {
+      padding: 20px;
+    }
+
+    .wrapper {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      @media #{$media-movil, $media-iphone}{
+        grid-template-columns: 1fr;
+      }
+
+      .left {
+        h2 {
+          font-weight: bold;
+          font-size: 3em;
+          @media #{$media-movil, $media-iphone} {
+            font-size: 2.5rem;
+            line-height: 2rem;
+            text-align: center;
+          }
+        }
+
+        p {
+          width: 70%;
+          font-weight: 500;
+          margin: 30px 0;
+          @media #{$media-movil, $media-iphone} {
+            width: 100%;
+            text-align: justify;
+          }
+        }
+
+        .items {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5rem;
+          @media #{$media-movil, $media-iphone} {
+            width: 100%;
+            gap: 1.8rem;
+            flex-direction: column;
+          }
+
+          & > figure {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            @media #{$media-movil, $media-iphone} {
+            }
+
+            img {
+              width: 30px;
+              height: 30px;
+              @media #{$media-movil, $media-iphone} {
+                img {
+                  width: 30px;
+                }
+              }
+            }
+
+            figcaption {
+              @media #{$media-movil, $media-iphone} {
+                text-transform: uppercase;
+                font-size: 1.3rem;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+
+      .right{
+        height: 700px;
+        @media #{$media-movil, $media-iphone}{
+          height: auto;
+          .image{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .section2 {
+    padding: 50px 0;
+    background: white;
+    @media #{$media-movil, $media-iphone} {
+      padding: 20px;
+      background: none;
+    }
+
+    .wrapper {
+      .header {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+          font-weight: bold;
+          font-size: 3.5em;
+          @media #{$media-laptop} {
+            font-size: 1em;
+          }
+          @media #{$media-movil, $media-iphone} {
+            width: 100%;
+            font-size: 2.5rem;
+            line-height: 2rem;
+          }
+        }
+
+        p {
+          font-size: 1.5em;
+          width: 700px;
+          font-weight: 500;
+          margin: 50px 0;
+          @media #{$media-movil, $media-iphone} {
+            width: 100%;
+            padding: 0 20px;
+            margin: 20px 0;
+          }
+        }
+      }
+
+      .content {
+        background: white;
+        border-radius: 5px;
+        display: flex;
+        box-shadow: 0 0 15px rgba(#d1d2d8, .5);
+        justify-content: space-between;
+        @media #{$media-movil, $media-iphone} {
+          height: 100%;
+          box-shadow: none;
+          background: none;
+          border: none;
+        }
+
+        .left {
+          padding-left: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media #{$media-movil, $media-iphone} {
+            padding-left: 0;
+          }
+
+          .steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            @media #{$media-movil, $media-iphone} {
+              grid-template-columns: repeat(1, 1fr);
+              gap: .5rem;
+            }
+
+            & > div {
+              margin-bottom: 1rem;
+
+
+              h3 {
+                height: 25px;
+                margin: 15px 0;
+              }
+
+              @media #{$media-movil, $media-iphone} {
+                display: flex;
+                flex-wrap: wrap;
+                background: white;
+                border-radius: 5px;
+                padding: 20px;
+                box-shadow: 0 0 15px rgba(#d1d2d8, .5);
+                border: 1px solid var(--border);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h3 {
+                  height: 50px;
+                  margin-top: 0;
+                  font-size: 1.2em;
+                  margin-left: 10px;
+                  display: flex;
+                  align-items: center;
+                }
+                p {
+                  width: 100%;
+                  text-align: center;
+                }
+              }
+
+              i {
+                display: flex;
+                background: var(--circle-bg);
+                border-radius: 100%;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                @media #{$media-movil, $media-iphone} {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+
+        .right {
+          width: 70%;
+          display: flex;
+          justify-content: flex-end;
+          @media #{$media-movil, $media-iphone} {
+            display: none;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}

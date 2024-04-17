@@ -1,0 +1,44 @@
+
+<section class="am-gallery">
+  <transition name="modal">
+    <div class="am-modal-mask">
+      <div class="am-modal-wrapper">
+        <div class="am-modal-container">
+          <div class="am-modal-header">
+            <div class="am-close" @click="cancelModal()"></div>
+          </div>
+          <div class="am-modal-body" id="body-thumbs">
+            <div class="left-arrow" @click="GoToLeft()">
+              <i>
+                <fa icon="chevron-left"/>
+              </i>
+            </div>
+            <div class="center">
+              <div class="item" v-for="(image, index) in images"
+                   :class="{active: index == imageIndex, passed: index > imageIndex}" :data-val="index">
+                <figure >
+                  <img :src="`${sharedEnv.cdnUrl}/api/files/${image.File}`" alt="">
+                </figure>
+              </div>
+            </div>
+            <div class="right-arrow" @click="GoToRight()">
+              <i>
+                <fa icon="chevron-right"/>
+              </i>
+            </div>
+            <div class="thumbs-container" id="thumbs-container">
+              <div class="thumb-item" v-for="(image, index) in images" :class="{active: index == imageIndex}" @click="activeClass(index)">
+                <figure>
+                  <img :src="`${sharedEnv.cdnUrl}/api/files/${image.File}`" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </transition>
+
+</section>
+

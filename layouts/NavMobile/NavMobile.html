@@ -1,0 +1,26 @@
+
+<section class="nav-mobile" :class="{'hide': !getMobileMenu}">
+  <header>
+    <img src="/logo-large.png" alt="">
+    <span @click="toggleMobileMenu">&times</span>
+  </header>
+  <ul>
+    <li v-for="(item, key) of items" :key="key" @click="navLink(item.to.name)">
+      {{ $t(item.title) }}
+    </li>
+  </ul>
+  <div class="languages">
+    <span>{{languageActive === 'English' ? 'Languages' : 'Lenguajes'}}</span>
+    <ul>
+      <li @click="languageActive = 'Spanish'" :class="{selected: languageActive === 'Spanish'}">
+        <nuxt-link :to="switchLocalePath('es')" >{{ $t('spanish') }}</nuxt-link>
+        <img src="/layout/spain.png" alt="">
+      </li>
+      <li @click="languageActive = 'English'" :class="{selected: languageActive === 'English'}">
+        <nuxt-link :to="switchLocalePath('en')">{{ $t('english') }}</nuxt-link>
+        <img src="/layout/usa.png" alt="">
+      </li>
+    </ul>
+  </div>
+</section>
+

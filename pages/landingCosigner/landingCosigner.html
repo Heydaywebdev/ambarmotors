@@ -1,0 +1,90 @@
+
+<section class="landing-cosigner">
+  <section class="hero">
+    <div class="wrapper">
+      <div class="left">
+        <h1>{{$t('hero-t')}}</h1>
+      </div>
+      <div class="right">
+        <div class="landing-form">
+          <div class="title">{{$t('hero-b')}}</div>
+          <form @submit.prevent="sendLandingForm">
+            <div>
+              <input type="text" v-validate="'alpha|required'" v-model="form.FirstName" name="first_name" :placeholder="$t('first_name')">
+              <span class="validation_error">{{ errors.first('first_name') }}</span>
+            </div>
+
+            <div>
+              <input type="text" v-validate="'alpha'" v-model="form.MiddleName" name="middle_name" :placeholder="$t('middle_name')">
+              <span class="validation_error">{{ errors.first('middle_name') }}</span>
+            </div>
+
+            <div>
+              <input type="text" v-validate="'alpha_spaces|required'" v-model="form.LastName" name="last_name" :placeholder="$t('last_name')">
+              <span class="validation_error">{{ errors.first('last_name') }}</span>
+            </div>
+
+            <div>
+              <input type="text" v-validate="'email|required'" v-model="form.Email" name="email" :placeholder="$t('email')">
+              <span class="validation_error">{{ errors.first('email') }}</span>
+            </div>
+
+            <div>
+              <input type="text" v-validate="'digits:10|required'" v-model="form.Phone" name="phone" :placeholder="$t('phone')">
+              <span class="validation_error">{{ errors.first('phone') }}</span>
+            </div>
+
+            <div class="textarea">
+              <textarea name="" id="" cols="30" rows="10" v-validate="'alpha_spaces|required'" v-model="form.Comments" name="comments" :placeholder="$t('comments')"></textarea>
+              <span class="validation_error">{{ errors.first('comments') }}</span>
+            </div>
+           <div class="action">
+             <AmButton type="custom" size="m" bg="var(--primary-green)" fw="bold" color="white" textSize="uppercase"   :text="$t('apply')" />
+           </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="title"></div>
+    </div>
+  </section>
+  <section class="section1">
+    <div class="wrapper">
+      <div class="header">
+        <h2>{{$t('section1-t')}}</h2>
+        <p>{{$t('section1-p')}}</p>
+      </div>
+      <div class="content">
+        <div class="left">
+          <div class="steps">
+            <div>
+              <i><img src="/home/icons/cosigner.svg" alt=""></i>
+              <h3>{{$t('section1-item1-t')}}</h3>
+              <p>{{$t('section1-item1-p')}}</p>
+            </div>
+            <div>
+              <i><img src="/home/icons/waranty.svg" alt=""></i>
+              <h3>{{$t('section1-item2-t')}}</h3>
+              <p>{{$t('section1-item2-p')}}</p>
+            </div>
+            <div>
+              <i><img src="/home/icons/engine.svg" alt=""></i>
+              <h3>{{$t('section1-item3-t')}}</h3>
+              <p>{{$t('section1-item3-p')}}</p>
+            </div>
+            <div>
+              <i><img src="/home/icons/referido.svg" alt=""></i>
+              <h3>{{$t('section1-item4-t')}}</h3>
+              <p>{{$t('section1-item4-p')}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <img src="/sell/offer.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+

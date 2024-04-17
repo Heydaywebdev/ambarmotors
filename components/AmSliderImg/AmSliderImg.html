@@ -1,0 +1,14 @@
+<section class="am-slider-img">
+  <span class="left" @click="advancePage('backward')"><fa icon="chevron-left"/></span>
+  <span class="right" @click="advancePage()"><fa icon="chevron-right"/></span>
+  <div v-if="!(car.SelectedImage || car.Images.length > 0)">
+    <img src="https://ambarmotors.com/coming-soon.png" alt="car coming soon">
+  </div>
+  <carousel ref="carrousel" v-else :touchDrag="true" :per-page="1" :paginationEnabled="false" :navigationEnabled="true"
+            :navigationPrevLabel="'prev'" :navigationNextLabel="'next'" :centerMode="true" :mouse-drag="true"
+            :adjustableHeight="false" :loop="true">
+    <slide v-for="item in car.Images" :key="item._id">
+      <img :src="getImageUrl(item)" alt="">
+    </slide>
+  </carousel>
+</section>

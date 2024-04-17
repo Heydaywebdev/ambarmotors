@@ -1,0 +1,56 @@
+<section class="am-search-car">
+  <div v-if="display === 'full'" class="full-search">
+    <div class="input-search">
+      <form>
+        <input type="text" ref="textbox" :type="type" :placeholder="placeholder" :value="value" @input="updateText" v-model="query" @keyup="searchAutoComplete">
+      </form>
+      <ul ref="ulResults">
+        <li v-for="result in results" @click="select(result)">
+          {{result.text}}
+        </li>
+      </ul>
+      <button @click="searchAutoComplete">
+        <i>
+          <fa icon="search" />
+        </i>
+      </button>
+    </div>
+  </div>
+  <div v-if="display === 'simple'" class="simple-search">
+    <div class="input">
+      <input type="text" ref="textbox" :type="type"  :value="value" @input="updateText" v-model="query" @keyup="searchAutoComplete">
+      <div v-if="query === ''" class="placeholder">
+        <span>
+          <p>Search by make, model or keyword</p>
+        </span>
+        <span>|</span>
+      </div>
+    </div>
+    <div class="results">
+      <ul v-closable="{ exclude: [], handler: 'onClose'}">
+        <li v-for="result in results" @click="select(result)">
+          {{result.text}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div v-if="display === 'simple-clear'" class="simple-search clear">
+    <div class="input">
+      <input type="text" ref="textbox" :type="type" :placeholder="placeholder" :value="value" @input="updateText" v-model="query" @keyup="searchAutoComplete">
+      <div v-if="query === ''" class="placeholder">
+        <span>
+          <p>Search by make, model or keyword</p>
+        </span>
+        <span>|</span>
+      </div>
+    </div>
+    <div class="results">
+      <ul v-closable="{ exclude: [], handler: 'onClose'}">
+        <li v-for="result in results" @click="select(result)">
+          {{result.text}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+

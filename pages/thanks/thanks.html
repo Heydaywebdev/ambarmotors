@@ -1,0 +1,16 @@
+
+<section class="thanks">
+  <div class="wrapper">
+    <h1>{{$t('title')}} {{name}}!</h1>
+    <p>{{$t('title-p')}} Ambar Motors.</p>
+    <img src="">
+    <div class="message">
+      <p>{{$t('submission')}}</p>
+    </div>
+    <nuxt-link :to="localePath('assurance')">
+      <AmButton :text="$t('warranty')" size="xl" fw="bold" textSize="uppercase"/>
+    </nuxt-link>
+    <button></button>
+  </div>
+</section>
+

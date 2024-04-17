@@ -1,0 +1,60 @@
+<section class='nav' :class="{'bg': showNav }">
+
+
+  <nuxt-link :to="localePath('watchList')">
+    <div class='save-car' v-if='getFavorites.length > 0'>
+      <i :class="{'active':getFavorites.length > 0}">
+        <fa icon='heart' />
+      </i>
+      <span>{{ getFavorites.length }}</span>
+    </div>
+  </nuxt-link>
+
+  <ul>
+    <li v-for='(item, key) of items' :key='key'>
+      <nuxt-link :to='localePath(item.to.name)'>
+        {{ $t(item.title) }}
+      </nuxt-link>
+    </li>
+
+    <li class='more' ref='moreNav'>
+      <span @click="toggleExpand('More')" class='submenu'>
+        {{ $t('more') }}
+        <i><fa icon='angle-down' /></i>
+      </span>
+      <div v-closable="{ exclude: ['moreNav'], handler: 'onCloseMore'}">
+        <ul v-if='shown.More' class='submenu'>
+          <li v-for='(item, key) of more' :key='key'>
+            <nuxt-link :to='localePath(item.to.name)'>{{ $t(item.title) }}</nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+
+  <div class='language' ref='languageNav'>
+    <div @click="toggleExpand('Language')" class='language__active'>
+      <i v-if="languageActive === 'Spanish'"><img :src='`/layout/${language[$i18n.locale].Flag}.png`' alt=''></i>
+      <i v-if="languageActive === 'English'"><img :src='`/layout/${language[$i18n.locale].Flag}.png`' alt=''></i>
+      <span>{{ language[$i18n.locale].Key }}</span>
+      <i>
+        <fa icon='angle-down' />
+      </i>
+    </div>
+    <div v-if='shown.Language' v-closable="{ exclude: ['languageNav'], handler: 'onCloseLang'}"
+         class='language__select submenu'>
+      <ul>
+        <li @click="languageActive = 'Spanish'">
+          <img src='/layout/spain.png' alt=''>
+          <nuxt-link :to="switchLocalePath('es')" :class="{selected: language === 'Spanish'}">{{ $t('spanish') }}
+          </nuxt-link>
+        </li>
+        <li @click="languageActive = 'English'">
+          <img src='/layout/usa.png' alt=''>
+          <nuxt-link :to="switchLocalePath('en')" :class="{selected: language === 'English'}">{{ $t('english') }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

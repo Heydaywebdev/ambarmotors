@@ -1,0 +1,21 @@
+{
+  "en" : {
+    "sort" : "Sort",
+    "lowest_price" : "Lowest Price",
+    "highest_price" : "Highest Price",
+    "lowest_mileage": "Lowest Mileage",
+    "highest_mileage": "Highest Mileage",
+    "oldest_model": "Oldest Model",
+    "newest_model": "Newest Model"
+  },
+  "es": {
+    "sort" : "Ordenar",
+    "lowest_price" : "Precio más Bajo",
+    "highest_price" : "Precio más Alto",
+    "lowest_mileage": "Millaje más Bajo",
+    "highest_mileage": "Millaje más Alto",
+    "oldest_model": "Modelo más Viejo",
+    "newest_model": "Modelo más Nuevo"
+  }
+
+}

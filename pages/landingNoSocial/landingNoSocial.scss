@@ -1,0 +1,404 @@
+@import "~/scss/main.scss";
+
+.landing-no-social {
+  .hero {
+    //background: url('/pre-approved/hero-bg.png') no-repeat center / cover;
+    border-radius: 0 0 5rem 5rem;
+    box-shadow: var(--box-shadow-gray);
+    position: relative;
+    background: rgba(27, 77, 8, .9);
+    height: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    @media #{$media-movil, $media-iphone} {
+      height: 70vh;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 4rem;
+        line-height: 4rem;
+        text-transform: uppercase;
+        @media #{$media-movil, $media-iphone} {
+          font-size: 2rem;
+          line-height: 32px;
+        }
+
+        span {
+          &:nth-of-type(3),
+          &:nth-of-type(4) {
+            font-size: 3rem;
+            @media #{$media-movil, $media-iphone} {
+              font-size: 1rem;
+              line-height: 20px;
+            }
+          }
+
+          &:nth-of-type(3) {
+            color: var(--primary-orange);
+          }
+        }
+
+
+        @media #{$media-movil, $media-iphone} {
+          width: 100%;
+        }
+      }
+
+      .subtitle {
+        margin-top: 2rem;
+        color: var(--white);
+        text-align: center;
+        width: 50%;
+        @media #{$media-movil, $media-iphone} {
+          padding: 0 1.25rem;
+          width: 100%;
+          text-align: justify;
+        }
+      }
+
+      .cta {
+        background: var(--primary-orange);
+        padding: 1.25rem 2rem 1rem;
+        margin-top: 3rem;
+        border-radius: .8rem;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: normal;
+        line-height: 1;
+        font-weight: bold;
+        color: var(--white);
+
+        button{
+          border:0;
+        }
+
+        @media #{$media-movil, $media-iphone} {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .intro {
+    padding: 6rem 0;
+    @media #{$media-movil, $media-iphone} {
+      padding: 1.25rem;
+    }
+
+    .wrapper {
+      background: var(--gray-alt);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      display: flex;
+
+      padding: 1.25rem;
+      height: 250px;
+      box-shadow: var(--box-shadow-gray);
+      @media #{$media-movil, $media-iphone} {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .left{
+        .title {
+          font-size: 4rem;
+          color:var(--titles);
+          padding: 1rem 0;
+          @media #{$media-movil, $media-iphone} {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            line-height: 35px;
+          }
+        }
+      }
+
+      img{
+        position: relative;
+        height: 300px;
+        top:-70px;
+        @media #{$media-movil, $media-iphone} {
+          top:20px;
+          height: auto;
+          margin:1.25rem 0;
+        }
+      }
+    }
+  }
+
+  .features {
+    background: var(--gray-alt);
+    padding: 6rem 0;
+    @media #{$media-movil, $media-iphone} {
+      padding: 2rem 0;
+    }
+    .wrapper {
+      @media #{$media-movil, $media-iphone} {
+        padding: 0 1rem;
+      }
+      .title {
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 4rem;
+        color:var(--titles);
+        margin-bottom:5rem;
+        @media #{$media-movil, $media-iphone} {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:  "financing wide"
+                              "financing simple ";
+        gap: 1.25rem;
+
+        @media #{$media-movil, $media-iphone} {
+          grid-template-columns: 1fr;
+          grid-template-areas:  "financing"
+                                "wide"
+                                "simple";
+        }
+
+        li {
+          box-shadow: var(--box-shadow-gray);
+          padding: 1rem;
+          background: var(--white);
+          border-radius: 1rem;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          &::after{
+            border-radius: 1rem;
+            content:"";
+            top:0;
+            left:0;
+            background:rgba(#1c4a0c, .8);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+
+          h3,
+          p{
+            color:var(--white);
+            position: relative;
+            z-index: 10;
+          }
+          h3{
+            font-size: 2rem;
+            text-transform: uppercase;
+            @media #{$media-movil, $media-iphone} {
+              font-size: 1.2rem;
+            }
+          }
+          p{
+            color:var(--white);
+            font-weight: bold;
+            @media #{$media-movil, $media-iphone} {
+              font-weight: normal;
+            }
+          }
+
+          &:nth-of-type(1){
+            background: url('@/assets/landing/ssn/financing.jpg') no-repeat center/cover;
+            grid-area: financing;
+            height: 400px;
+            @media #{$media-movil, $media-iphone} {
+              height: 300px;
+            }
+          }
+          &:nth-of-type(2){
+            grid-area: wide;
+            background: url('@/assets/landing/ssn/cars.jpg') no-repeat center/cover;
+          }
+          &:nth-of-type(3){
+            background: url('@/assets/landing/ssn/purchase.png') no-repeat top/cover;
+            background-position: 0 -70px;
+            grid-area: simple;
+          }
+        }
+      }
+    }
+  }
+
+  .services {
+    padding: 6rem 0;
+    @media #{$media-movil, $media-iphone} {
+      padding: 2rem 0;
+    }
+    .wrapper {
+      @media #{$media-movil, $media-iphone} {
+        padding: 0 1rem;
+      }
+      .title{
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 4rem;
+        color:var(--titles);
+        margin-bottom:5rem;
+        @media #{$media-movil, $media-iphone} {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:1.25rem;
+
+        @media #{$media-movil, $media-iphone} {
+          grid-template-columns: 1fr;
+        }
+
+        li {
+          border-radius: 1rem;
+          height: 500px;
+          padding: 1.25rem;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          @media #{$media-movil, $media-iphone} {
+            height: 350px;
+          }
+          h3,
+          p{
+            color:var(--white);
+            position: relative;
+            z-index: 10;
+          }
+          h3{
+            font-size: 2rem;
+            text-transform: uppercase;
+          }
+          p{
+            color:var(--white);
+          }
+          &:nth-of-type(1) {
+            background: url('@/assets/landing/ssn/advisor.jpg') center/cover;
+            &::after {
+              background: var(--gradient-primary-green);
+              opacity: .9;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              content: "";
+              top:0;
+            }
+          }
+
+          &:nth-of-type(2) {
+            background: url('@/assets/landing/ssn/support.jpg') center/cover;
+            &::after {
+              background: var(--gradient-primary-orange);
+              opacity: .9;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              content: "";
+              top:0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .form-section{
+    background: rgba(27, 77, 8, .9);
+    border-radius: 5rem;
+    padding: 6rem 0;
+    @media #{$media-movil, $media-iphone} {
+      border-radius: 2rem;
+      padding: 2rem 1rem;
+    }
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title{
+        color:var(--white);
+        font-size: 4rem;
+        margin-bottom:5rem;
+        @media #{$media-movil, $media-iphone} {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .form{
+        background: var(--white);
+        border-radius: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        width: 50%;
+        padding: 1.25rem;
+        @media #{$media-movil, $media-iphone} {
+          width: 100%;
+          gap: 1rem;
+        }
+
+        & > div{
+          position: relative;
+          .validation_error{
+            position: absolute;
+            bottom:-20px;
+            right:10px;
+            font-size: .7rem;
+            color:var(--error);
+            font-weight: bold;
+          }
+        }
+
+        input,textarea{
+          resize: none;
+          border-radius: 1.25rem;
+          width: 100%;
+          padding: 1.25rem;
+          border:1px solid var(--border);
+        }
+        input{
+          height: 3rem;
+        }
+        textarea{
+        }
+      }
+    }
+  }
+}
+
+//.landing-no-social {
+//  .hero{
+//    background: url('/landings/social//bg-hero.jpg') no-repeat top / cover;
+//    @media #{$media-movil, $media-iphone} {
+//      background: var(--primary-green);
+//
+//    }
+//    @extend %landing-hero;
+//  }
+//  .section1{
+//    padding:40px 0;
+//    @extend %steps;
+//  }
+//}

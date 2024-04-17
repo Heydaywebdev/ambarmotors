@@ -1,0 +1,56 @@
+@import "~/scss/main.scss";
+
+.calculator {
+  & > .am-container{
+      padding: 0 50px;
+  }
+  & > .bottom{
+    width: 100%;
+    background: white;
+    & > .am-container{
+      padding: 30px 50px;
+    }
+  }
+}
+
+@media #{$media-laptop}{
+  .calculator{
+    & > .am-container{
+      padding: 0;
+    }
+  }
+}
+@media #{$media-movil}{
+  .calculator{
+    & > .am-container{
+      padding: 0;
+    }
+    & > .bottom{
+      width: 100%;
+      background: white;
+      & > .am-container{
+        padding: 30px 10px;
+        & > p{
+          font-size: .8em;
+        }
+      }
+    }
+  }
+}
+@media #{$media-iphone}{
+  .calculator{
+    & > .am-container{
+      padding: 0;
+    }
+    & > .bottom{
+      width: 100%;
+      background: white;
+      & > .am-container{
+        padding: 30px 10px;
+        & > p{
+          font-size: .8em;
+        }
+      }
+    }
+  }
+}

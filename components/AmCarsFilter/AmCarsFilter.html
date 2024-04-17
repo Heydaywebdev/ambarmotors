@@ -1,0 +1,70 @@
+<section class="am-cars-filter">
+  <div class="filter">
+    <section class="makes-and-models" v-if="makes && makes.data">
+      <div class="filter__title">
+        {{$t('make_model')}}
+        <i><fa icon="chevron-down"></fa></i>
+      </div>
+      <ul :class="{collapse: showMoreFilters.Makes.unlocked }">
+        <li @click="pickMake('all_makes')">
+          <span>{{$t('all_makes')}} ({{allMakes}})</span>
+        </li>
+        <li v-for="make in getMakes">
+          <span @click="toggle(make.Make)">{{ make.Make }} ({{make.count}})</span>
+          <ul>
+            <li :class="visibilityClass(make.Make)" @click="pickMake(make.Make)">{{$t('all_m')}} ({{make.count}})</li>
+            <li :class="visibilityClass(make.Make, model.Model)" v-for="model in models.data" v-if="model.Make === make.Make" @click="pickModel(make.Make, model.Model)">{{model.Model}} ({{model.count}})</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="more-and-less" v-if="showMoreFilters.Makes.unlockable">
+        <span v-if="!showMoreFilters.Makes.unlocked" @click="showMoreFilters.Makes.unlocked = true">Show More</span>
+        <span v-else @click="showMoreFilters.Makes.unlocked = false">Show Less</span>
+      </div>
+    </section>
+    <section class="body" v-if="bodies && bodies.data">
+      <div class="filter__title">
+        {{$t('body_type')}}
+        <i><fa icon="chevron-down"></fa></i>
+      </div>
+      <div class="all-body" @click="pickBody('all_bodies')">{{$t('all_bodies')}} ({{bodies.data.length}})</div>
+      <ul>
+        <li :class="selectionClass(body)" v-for="body in bodies.data" @click="pickBody(body)" v-if="body && body.length > 1">
+          <img class="white" :src="`/body/${body.toLowerCase()}_white.png`" alt="img body">
+          <img class="yellow" :src="`/body/${body.toLowerCase()}_yellow.png`" alt="img body">
+          {{body}}
+        </li>
+      </ul>
+    </section>
+    <section class="years" v-if="years && years.data">
+      <div class="filter__title">
+        {{$t('year')}}
+        <i><fa icon="chevron-down"></fa></i>
+      </div>
+      <div class="all-years" @click="pickYear('all_years')">{{$t('all_years')}} ({{years.data.length}})</div>
+      <ul>
+        <li :class="selectionClass(year)" v-for="year in years.data" @click="pickYear(year)">{{year}}</li>
+      </ul>
+    </section>
+    <section class="prices">
+      <div class="filter__title">
+        {{$t('price')}}
+        <i><fa icon="chevron-down"></fa></i>
+      </div>
+      <div class="range-price">
+        <vue-slider @drag-end="priceChange" v-model="priceRange" :width="'Auto'" :min="0" :max="120000" :tooltipStyle="{ backgroundColor: '#00520a'}" :processStyle="{ backgroundColor: '#00520a'}" :enable-cross="false"></vue-slider>
+      </div>
+    </section>
+    <section class="mileage">
+      <div class="filter__title">
+        {{$t('mileage')}}
+        <i><fa icon="chevron-down"></fa></i>
+      </div>
+      <div class="range-mileage">
+        <vue-slider @drag-end="mileageChange" v-model="mileageRange" :width="'Auto'" :min="0" :max="250000" :tooltipStyle="{ backgroundColor: '#00520a'}" :processStyle="{ backgroundColor: '#00520a'}" :enable-cross="false"></vue-slider>
+      </div>
+    </section>
+
+  </div>
+
+</section>

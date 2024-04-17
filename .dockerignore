@@ -1,0 +1,5 @@
+node_modules
+npm-debug*
+.nuxt
+yarn.lock
+package-lock.json

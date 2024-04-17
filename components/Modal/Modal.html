@@ -1,0 +1,21 @@
+<section class='modal'>
+  <transition name='modal'>
+    <div class='modal-mask'>
+      <div class='modal-wrapper' :style="{'--width':width,'--padding':padding}">
+        <div class='close' @click='cancelModal()'>Close <i>&times</i></div>
+        <div class='modal-header'>
+          <slot name='header'></slot>
+        </div>
+
+        <div class='ez-modal-body'>
+          <slot name='body'></slot>
+        </div>
+
+        <div class='ez-modal-footer'>
+          <slot name='footer'></slot>
+        </div>
+      </div>
+    </div>
+  </transition>
+</section>
+

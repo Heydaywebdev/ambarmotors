@@ -1,0 +1,123 @@
+<section class='sell'>
+  <div class='hero'>
+    <div class='wrapper'>
+      <div class='left'>
+        <h1 class='title'>{{ $t('hero-t') }}</h1>
+        <h2 class='description'>{{ $t('hero-p') }}</h2>
+        <div class='widget'>
+          <div id='ez_leads_trade-in'></div>
+        </div>
+<!--        <nuxt-link :to="localePath('appraisalWidget')">-->
+<!--          -->
+<!--          <AmButton-->
+<!--            :type="'custom'"-->
+<!--            :bg="'#1b4d08'"-->
+<!--            :color="'#fff'"-->
+<!--            :size="'m'"-->
+<!--            textSize='uppercase'-->
+<!--            fw='bold'-->
+<!--            :text="$t('hero-b')" />-->
+<!--        </nuxt-link>-->
+
+      </div>
+      <div class='right'>
+        <img src='/sell/car-green.png' alt=''>
+      </div>
+    </div>
+  </div>
+  <div class='hero-items'>
+    <div class='wrapper'>
+      <div class='steps'>
+        <div>
+          <figure><img src='/home/focused.png' alt=''></figure>
+          <div>
+            <h3>{{ $t('hero-item1-t') }}</h3>
+            <p>{{ $t('hero-item1-p') }}</p>
+          </div>
+        </div>
+        <div>
+          <figure><img src='/home/confianza.png' alt=''></figure>
+          <div>
+            <h3>{{ $t('hero-item2-t') }}</h3>
+            <p>{{ $t('hero-item2-t') }}</p>
+          </div>
+        </div>
+        <div>
+          <figure><img src='/home/no-trucos.png' alt=''></figure>
+          <div>
+            <h3>{{ $t('hero-item3-t') }}</h3>
+            <p>{{ $t('hero-item3-t') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='section1'>
+    <div class='wrapper'>
+      <div class='left'>
+        <h2>{{ $t('section1-t') }}</h2>
+        <p>{{ $t('section1-p') }}</p>
+        <div class='items'>
+          <figure>
+            <img src='/sell/icons/no-obligations.svg' alt=''>
+            <figcaption>{{ $t('section1-item1-t') }}</figcaption>
+          </figure>
+          <figure>
+            <img src='/sell/icons/competitive-offers.svg' alt=''>
+            <figcaption>{{ $t('section1-item2-t') }}</figcaption>
+          </figure>
+          <figure>
+            <img src='/sell/icons/sell-your-car-today.svg' alt=''>
+            <figcaption>{{ $t('section1-item3-t') }}</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class='right'>
+        <img class='image' src='/sell/evaluate.jpg' alt=''>
+      </div>
+    </div>
+  </div>
+  <div class='section2'>
+    <div class='wrapper'>
+      <div class='header'>
+        <h2>{{ $t('section2-t') }}</h2>
+        <p>{{ $t('section2-p') }}</p>
+      </div>
+      <div class='content'>
+        <div class='left'>
+          <div class='steps'>
+            <div>
+              <i><img src='/home/icons/cosigner.svg' alt=''></i>
+              <h3>{{ $t('section2-item1-t') }}</h3>
+              <p>{{ $t('section2-item1-p') }}</p>
+            </div>
+            <div>
+              <i><img src='/home/icons/waranty.svg' alt=''></i>
+              <h3>{{ $t('section2-item2-t') }}</h3>
+              <p>{{ $t('section2-item2-p') }}</p>
+            </div>
+            <div>
+              <i><img src='/home/icons/engine.svg' alt=''></i>
+              <h3>{{ $t('section2-item3-t') }}</h3>
+              <p>{{ $t('section2-item3-p') }}</p>
+            </div>
+            <div>
+              <i><img src='/home/icons/referido.svg' alt=''></i>
+              <h3>{{ $t('section2-item4-t') }}</h3>
+              <p>{{ $t('section2-item4-p') }}</p>
+            </div>
+          </div>
+        </div>
+        <div class='right'>
+          <img src='/sell/offer.png' alt=''>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script
+    async
+    type='application/javascript'
+    :src='`${api_url}/appraisal.js`'>
+  </script>
+</section>
+

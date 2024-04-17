@@ -1,0 +1,302 @@
+@import "~/scss/main.scss";
+
+.inventory {
+
+  .filters-and-cars {
+    display: flex;
+
+    .filter {
+      height: calc(100vh - 81px);
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      z-index: 99999;
+      width:250px;
+      @media #{$media-movil, $media-iphone} {
+        height: 100vh;
+      }
+
+      &.hide {
+        left: -100%;
+      }
+
+      &.show {
+        left: 0;
+      }
+
+      .show-filters {
+        background: white;
+        padding: 0 15px;
+        display: flex;
+        height: 70px;
+        left: 0;
+        align-items: center;
+        justify-content: space-between;
+
+        & > span {
+          font-size: 1.5em;
+          cursor: pointer;
+        }
+      }
+
+      .wrapper {
+        width:250px;
+        overflow: auto;
+        flex: 1;
+      }
+    }
+
+    .content {
+      padding: 0 55px;
+      flex: 1;
+      @media #{$media-movil, $media-iphone} {
+        padding: 0;
+      }
+
+      &.fix-margin {
+        margin-left: 250px;
+        @media #{$media-movil, $media-iphone} {
+          margin: 0;
+        }
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: 60px;
+        flex-wrap: wrap;
+        color: var(--p);
+        @media #{$media-movil} {
+          width: 100%;
+          padding: 0 20px;
+          flex-wrap: wrap;
+          justify-content: normal;
+        }
+        @media #{$media-iphone} {
+          padding: 0 20px;
+        }
+
+        .show-filters {
+          cursor: pointer;
+          align-items: center;
+          margin-right: 10px;
+          display: flex;
+          font-weight: 500;
+          @media #{$media-movil,$media-iphone} {
+            flex: 1;
+          }
+
+          i {
+            color: var(--primary-green);
+            margin-right: 5px;
+          }
+        }
+
+        .filters {
+          display: flex;
+          flex-wrap: wrap;
+          flex: 1;
+          @media #{$media-movil,$media-iphone} {
+            display: none;
+          }
+
+          .clear-filter {
+            color: var(--color-orange);
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          & > div {
+            margin-right: 10px;
+            cursor: pointer;
+
+            span {
+              color: var(--primary-green);
+              font-weight: 500;
+            }
+
+            i {
+              color: var(--color-gray);
+              font-weight: bold;
+            }
+          }
+        }
+
+        .car-compare {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          &.active {
+            color: var(--primary-green);
+          }
+
+          .icons {
+            display: flex;
+            margin-right: 5px;
+            transform: rotate(90deg);
+
+            i {
+              display: block;
+              color: var(--color-orange);
+            }
+          }
+        }
+
+        .separate {
+          background: var(--p);
+          height: 18px;
+          margin: 0 20px;
+          width: 1px;
+        }
+
+        .sort {
+          position: relative;
+          z-index: 9999;
+          height: 50px;
+
+          & > div {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            .icons {
+              display: flex;
+              margin-right: 5px;
+
+              i {
+                display: block;
+                color: var(--color-orange);
+              }
+            }
+
+            span {
+              color: var(--primary-orange);
+              font-weight: bold;
+              font-size: 0.8em;
+              margin-left: 5px;
+            }
+          }
+
+          ul {
+            background: white;
+            border-radius: 5px;
+            border: 1.5px solid var(--color-border-gray);
+            position: absolute;
+            display: none;
+            right: 0;
+            margin: 0;
+            width: 190px;
+            top: 100%;
+            padding: 10px 20px;
+            z-index: 999999;
+            font-weight: 500;
+
+            li {
+              list-style: none;
+              margin-bottom: 5px;
+              cursor: pointer;
+
+              &:hover {
+                color: var(--color-orange);
+                text-decoration: underline;
+              }
+            }
+          }
+
+          &:hover {
+            ul {
+              display: block;
+            }
+          }
+        }
+
+        .filters-mobile {
+          display: none;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 10px;
+          margin-bottom: 10px;
+          width: 100%;
+          @media #{$media-movil,$media-iphone} {
+            display: grid;
+          }
+
+          .clear-filter {
+            color: var(--primary-green);
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          & > div {
+            cursor: pointer;
+
+            span {
+              color: var(--primary-green);
+            }
+
+            i {
+              color: var(--color-gray);
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      .cars {
+        .title{
+          margin:1.25rem 0;
+          text-transform: capitalize;
+          font-size: 2rem;
+          @media #{$media-movil, $media-iphone} {
+            margin-bottom:1.25rem;
+            text-align: center;
+          }
+        }
+        &__first-car {
+          display: none;
+          @media #{$media-movil, $media-iphone} {
+            display: block;
+          }
+
+        }
+
+        &__content {
+          justify-content: space-between;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(130px, 320px));
+          grid-gap: 35px;
+          width: 100%;
+          @media #{$media-ipad}{
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+          @media #{$media-movil} {
+            grid-template-columns: 1fr;
+            padding: 0 20px;
+            grid-gap: 20px 0;
+            .am-car-card {
+              &:nth-of-type(1) {
+                display: none;
+              }
+            }
+          }
+          @media #{$media-iphone} {
+            grid-template-columns: 1fr;
+            grid-gap: 15px;
+            padding: 0 20px;
+            .am-car-card {
+              &:nth-of-type(1) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

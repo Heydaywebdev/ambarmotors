@@ -1,0 +1,36 @@
+{
+    "en": {
+      "title1": "Payment Calculator",
+      "vehicle-price": "Vehicle Price",
+      "credit-title":"Credit rating",
+      "bad": "Challenged",
+      "fair": "Fair",
+      "good": "Good",
+      "very-good": "Very Good",
+      "excellent": "Excellent",
+      "down": "Down Payment",
+      "years": "Term Length",
+      "details": "Details",
+      "result": "Monthly Payment",
+      "per-month": "Monthly",
+      "pre-app": "Find cars like these in our used car inventory",
+      "inventory": "Inventory"
+    },
+    "es": {
+      "title1": "Calculadora de pagos",
+      "vehicle-price": "Precio del Vehículo",
+      "credit-title":"Calificación crediticia",
+      "bad": "Malo",
+      "fair": "Regular",
+      "good": "Bueno",
+      "very-good": "Muy Bueno",
+      "excellent": "Excelente",
+      "down": "Pago Inicial",
+      "years": "Término de pagos",
+      "details": "Detalles",
+      "result": "Pago mensual",
+      "per-month": "Mensual",
+      "pre-app": "Encuentra vehículos asociados con este precio en nuestro inventario de autos usados",
+      "inventory": "Inventario"
+    }
+}

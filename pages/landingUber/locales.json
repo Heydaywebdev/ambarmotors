@@ -1,0 +1,30 @@
+{
+    "en": {
+      "hero-t":"We have the perfect car and financing program to start working with Uber today",
+      "hero-b": "Apply now",
+      "section1-t": "Exceptional benefits",
+      "section1-p": "We offer a great buying experience for everyone. That is why we have the best benefits in the market",
+      "section1-item1-t": "Referrals",
+      "section1-item2-t": "Maintenance",
+      "section1-item3-t": "Warranty",
+      "section1-item4-t": "Approval",
+      "section1-item1-p": "Get up to $200 for every referral",
+      "section1-item2-p": "Up to two years of maintenance included!",
+      "section1-item3-p": "We offer up to 200,000 miles warranty on vehicles",
+      "section1-item4-p": "Approval in just five minutes"
+    },
+    "es": {
+      "hero-t":"Contamos con el carro y plan perfecto, para que inicies con Uber",
+      "hero-b": "Aplicar ahora",
+      "section1-t": "Benficios excepcionales",
+      "section1-p": "Construimos una experiencia de compra de automóviles para todos.  Por eso ofrecemos los mejores beneficios del mercado",
+      "section1-item1-t": "Referidos",
+      "section1-item2-t": "Mantenimiento",
+      "section1-item3-t": "Garantia",
+      "section1-item4-t": "Aprobación",
+      "section1-item1-p": "Gana con nosotros hasta 200 usd por cada referido",
+      "section1-item2-p": "Incluimos hasta 2 años de mantenimiento",
+      "section1-item3-p": "Todos nuestros vehículos cuentan hasta 200.000 millas de garantía",
+      "section1-item4-p": "Revisión y respuesta financiera en solo 5 minutos"
+    }
+}

@@ -1,0 +1,226 @@
+@import "~/scss/main.scss";
+
+.contact {
+  .hero {
+    background: url('/contact/hero-bg.png') no-repeat center / cover;
+    height: 700px;
+    @media #{$media-movil, $media-iphone} {
+      height:200px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+      height: 100%;
+      @media #{$media-movil, $media-iphone} {
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        color: white;
+        margin-top:30px;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: white;
+        font-size:1.5rem;
+      }
+    }
+  }
+
+  &__form {
+    position: relative;
+    top: -500px;
+    @media #{$media-movil, $media-iphone} {
+      top:0;
+    }
+
+    .container {
+      height:300px;
+      margin-bottom:50px;
+      @media #{$media-movil, $media-iphone} {
+        height:100%;
+      }
+      .content{
+        background: white;
+        border-radius: 5px;
+        border: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        @media #{$media-movil, $media-iphone} {
+          height: 100%;
+          background: none;
+          border: none;
+          padding: 0 20px;
+          margin:20px 0;
+        }
+
+        .left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 50%;
+          @media #{$media-movil, $media-iphone} {
+            width: 100%;
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            border: 1px solid var(--border);
+          }
+
+          h2 {
+            font-weight: bold;
+            margin: 20px;
+            text-transform: uppercase;
+            @media #{$media-movil, $media-iphone} {
+              font-size: 1.5rem;
+              text-align: center;
+              width: 100%;
+              margin-top:0;
+            }
+          }
+
+          form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            @media #{$media-movil, $media-iphone} {
+              width: 100%;
+            }
+
+            & > div:not(.textarea .action) {
+              position: relative;
+              margin-bottom: 30px;
+              height: 45px;
+              width: 100%;
+
+              span {
+                position: absolute;
+                bottom: -15px;
+                color: var(--error);
+                left: 5px;
+                height: 10px;
+                font-size: .7rem;
+                font-weight: bold;
+              }
+
+              input {
+                width: 100%;
+                height: 100%;
+                border: 1px solid var(--border);
+                border-radius: 5px;
+                padding: 0 15px;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+            }
+
+            .textarea {
+              margin-bottom: 10px;
+              position: relative;
+              height: 100px;
+              resize: none;
+              padding: 30px;
+              width: 100%;
+
+              span {
+                position: absolute;
+                bottom: -15px;
+                left: 5px;
+                height: 10px;
+                font-size: .8rem;
+              }
+
+              textarea {
+                position: absolute;
+                border: 1px solid var(--border);
+                top: 0;
+                left: 0;
+                border-radius: 5px;
+                resize: none;
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+              }
+            }
+
+            .action {
+              margin-top: 20px;
+              position: relative;
+              height: auto;
+            }
+          }
+        }
+
+        .right {
+          width: 50%;
+          display: flex;
+          justify-content: flex-end;
+          @media #{$media-movil, $media-iphone} {
+            display: none;
+          }
+
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+    }
+
+  }
+  &__address {
+    margin-bottom: 50px;
+    margin-top:-100px;
+    @media #{$media-movil, $media-iphone} {
+      margin-top: 0;
+      width:100%;
+      padding:0 20px;
+    }
+    .container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+      height: 380px;
+      @media #{$media-movil, $media-iphone} {
+        grid-template-columns: 1fr;
+        height: 100%;
+      }
+      .left,
+      .right {
+        background: white;
+        border-radius: 5px;
+        overflow: hidden;
+        border:1px solid var(--border);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media #{$media-movil, $media-iphone} {
+          height:350px;
+        }
+
+        h2 {
+          font-weight: 500;
+          text-transform: uppercase;
+          padding: 20px 0;
+          display: flex;
+          @media #{$media-movil, $media-iphone} {
+            font-size: 1rem;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

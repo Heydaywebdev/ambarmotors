@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Referido</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="78.125%" y1="66.1762882%" x2="21.875%" y2="25.1738461%" id="linearGradient-1">
+            <stop stop-color="#00520A" offset="0%"></stop>
+            <stop stop-color="#2DA401" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Referido" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10.75,12.5 L8.25,12.5 C4.7975,12.5 2,15.2975 2,18.75 C2,19.44125 2.55875,20 3.25,20 L15.75,20 C16.44125,20 17,19.44125 17,18.75 C17,15.2975 14.2025,12.5 10.75,12.5 Z M4.73,17.5 C5.24625,16.0475 6.61875,15 8.25,15 L10.75,15 C12.38125,15 13.75375,16.0475 14.27,17.5 L4.73,17.5 Z M9.5,10 C11.57125,10 13.25,8.32125 13.25,6.25 L13.25,3.75 C13.25,1.67875 11.57125,0 9.5,0 C7.42875,0 5.75,1.67875 5.75,3.75 L5.75,6.25 C5.75,8.32125 7.42875,10 9.5,10 Z M8.25,3.75 C8.25,3.05875 8.80875,2.5 9.5,2.5 C10.19125,2.5 10.75,3.05875 10.75,3.75 L10.75,6.25 C10.75,6.94125 10.19125,7.5 9.5,7.5 C8.80875,7.5 8.25,6.94125 8.25,6.25 L8.25,3.75 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

@@ -1,0 +1,260 @@
+@import "~/scss/main.scss";
+.home {
+  .buying{
+    background:white;
+    padding: 50px 0;
+    @media #{$media-movil, $media-iphone} {
+      height:100%;
+    }
+
+    .wrapper {
+      background: white;
+      border-radius: 5px;
+      height: 332px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 50px;
+      @media #{$media-movil, $media-iphone} {
+        top: 0;
+        height: 100%;
+        padding: 50px 20px;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+        @media #{$media-movil, $media-iphone} {
+          grid-template-columns: 1fr;
+          grid-gap: 30px;
+        }
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img {
+            width: 150px;
+            margin-right: 10px;
+            object-fit: cover;
+          }
+
+          div {
+            text-align: center;
+            h3 {
+              color: black;
+              font-size: 1.2em;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+    }
+  }
+  .recently{
+    margin-bottom:50px;
+  }
+  .first-buyer{
+    height:596px;
+    @media #{$media-movil, $media-iphone} {
+      height: 100%;
+    }
+    .wrapper {
+      display: flex;
+      padding:0 50px;
+      justify-content: space-between;
+      align-items: center;
+      @media #{$media-movil, $media-iphone} {
+        flex-direction: column;
+        padding:0 20px;
+      }
+      .left {
+        width: 40%;
+        h2 {
+          font-weight: bold;
+          margin-bottom:24px;
+        }
+        @media #{$media-movil, $media-iphone} {
+          width:100%;
+          margin-bottom:20px;
+        }
+      }
+      .right {
+        img{
+          width:494px;
+          @media #{$media-movil, $media-iphone} {
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+  .quality{
+    margin:50px 0;
+    .wrapper{
+      .header {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+          font-weight: bold;
+          font-size: 3.5em;
+          width: 882px;
+          @media #{$media-laptop} {
+            width: 582px;
+            font-size: 1em;
+          }
+          @media #{$media-movil, $media-iphone} {
+            width:100%;
+          }
+        }
+
+        p {
+          font-size: 1.5em;
+          width: 700px;
+          margin: 50px 0;
+          @media #{$media-movil, $media-iphone} {
+            width:100%;
+          }
+        }
+      }
+      .content {
+        background: white;
+        border-radius: 5px;
+        border:1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        height: 700px;
+        @media #{$media-movil, $media-iphone} {
+          height:100%;
+          background: none;
+          border:none;
+          padding:0 20px;
+        }
+
+        .left {
+          padding-left: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media #{$media-movil, $media-iphone} {
+            padding-left: 0;
+          }
+          .steps {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            @media #{$media-movil, $media-iphone} {
+              grid-template-columns: repeat(1, 1fr);
+            }
+            & > div {
+              margin-bottom:30px;
+              h3{
+                height:25px;
+                margin: 10px 0 20px 0;
+              }
+              @media #{$media-movil, $media-iphone} {
+                display: flex;
+                flex-wrap: wrap;
+                background: white;
+                margin-bottom:15px;
+                border-radius: 5px;
+                padding:20px;
+                border:1px solid var(--border);
+                h3 {
+                  height: 50px;
+                  margin-top: 0;
+                  font-size: 1.2em;
+                  margin-left:10px;
+                  display: flex;
+                  align-items: center;
+                }
+                p {
+                  width: 100%;
+                }
+              }
+
+              i {
+                display: flex;
+                background: var(--circle-bg) ;
+                border-radius: 100%;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+                height: 70px;
+                @media #{$media-movil, $media-iphone} {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+
+        .right {
+          width: 60%;
+          display: flex;
+          justify-content: flex-end;
+          @media #{$media-movil, $media-iphone} {
+            display: none;
+          }
+          img{
+            width:100%;
+          }
+        }
+      }
+    };
+  }
+  .sell-car{
+    background: url('/home/image-large.webp') no-repeat center / cover;
+    height:533px;
+    @media #{$media-movil, $media-iphone} {
+      padding:50px 20px;
+      height:100%;
+    }
+    .wrapper {
+      color:white;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+
+      h2 {
+        font-weight: bold;
+        font-size: 3.5em;
+        width:882px;
+        @media #{$media-laptop} {
+          width:582px;
+        }
+        @media #{$media-movil, $media-iphone} {
+          width:100%;
+          font-size: 1.6em;
+        }
+      }
+
+      p {
+        font-size: 1.5em;
+        width: 700px;
+        margin: 50px 0;
+        color:white;
+        @media #{$media-movil, $media-iphone} {
+          width: 100%;
+          font-size: 1em;
+          margin:20px 0;
+        }
+      }
+    }
+  }
+}

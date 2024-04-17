@@ -1,0 +1,32 @@
+@import "~/scss/main.scss";
+
+.watch-list {
+  padding: 0 45px 40px;
+  @media #{$media-movil, $media-iphone}{
+    padding: 0 20px;
+  }
+  .saved-cars {
+    &__title{
+      margin:20px 0;
+      font-size: 1.7rem;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 35px;
+
+      @media #{$media-ipad}{
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @media #{$media-movil} {
+        grid-template-columns: 1fr;
+        grid-gap: 20px 0;
+      }
+      @media #{$media-iphone} {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+      }
+    }
+  }
+}

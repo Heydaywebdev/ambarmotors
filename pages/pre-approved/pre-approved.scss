@@ -1,0 +1,285 @@
+@import "~/scss/main.scss";
+
+.pre-approved {
+  .hero {
+    //background: url('/pre-approved/hero-bg.png') no-repeat center / cover;
+    border-radius: 0 0 5rem 5rem;
+    position: relative;
+    background: rgba(27, 77, 8, .9);
+    height: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('@/assets/texture.png') repeat;
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    @media #{$media-movil, $media-iphone} {
+      height: 60vh;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 7rem;
+        line-height: 7rem;
+        text-transform: uppercase;
+
+        @media #{$media-movil, $media-iphone} {
+          font-size: 3rem;
+          line-height: 1;
+        }
+
+
+        .five {
+          color: var(--primary-orange);
+          font-size: 8rem;
+          @media #{$media-movil, $media-iphone} {
+            font-size: 4rem;
+          }
+        }
+
+        @media #{$media-movil, $media-iphone} {
+          width: 100%;
+        }
+      }
+
+      .apply {
+        background: var(--primary-orange);
+        padding: 1.25rem 2rem 1rem;
+        margin-top: 3rem;
+        border-radius: .8rem;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: normal;
+        line-height: 1;
+
+        a {
+          color: var(--white);
+          font-weight: bold;
+        }
+
+        @media #{$media-movil, $media-iphone} {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .buying {
+    position: relative;
+    @media #{$media-movil,$media-iphone} {
+      height: 100%;
+    }
+
+    .wrapper {
+      position: relative;
+      @media #{$media-movil, $media-iphone} {
+        height: 100%;
+      }
+
+      .steps {
+        border-radius: 5px;
+        display: grid;
+        padding: 4rem 0 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        @media #{$media-movil, $media-iphone} {
+          grid-template-columns: 1fr;
+          height: 100%;
+          position: relative;
+          padding: 20px 20px 0;
+          top: 0;
+          grid-gap: 30px;
+        }
+
+        & > div {
+          border: 1px solid var(--border);
+          border-radius: .5rem;
+          background: white;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          &.green {
+            background: var(--primary-green);
+          }
+
+          .number {
+            font-size: 8rem;
+            font-weight: bold;
+            font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+            line-height: normal;
+            color: var(--primary-orange);
+
+            &.white {
+              color: var(--white);
+            }
+          }
+
+          h3 {
+            color: black;
+            text-transform: capitalize;
+            width: 60%;
+            margin: 0;
+            line-height: 1;
+            font-size: 2.1rem;
+            font-weight: bold;
+            &.white {
+              color: var(--white);
+            }
+            @media #{$media-movil, $media-iphone} {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .quality {
+    margin: 50px 0;
+    @media #{$media-movil, $media-iphone} {
+      margin: 20px 0;
+    }
+
+    .wrapper {
+      .header {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+          font-weight: bold;
+          font-size: 3.5em;
+          width: 882px;
+          @media #{$media-laptop} {
+            width: 582px;
+            font-size: 1em;
+          }
+          @media #{$media-movil, $media-iphone} {
+            width: 100%;
+          }
+        }
+
+        p {
+          font-size: 1.5em;
+          width: 700px;
+          margin: 50px 0;
+          @media #{$media-movil, $media-iphone} {
+            width: 100%;
+          }
+        }
+      }
+
+      .content {
+        background: white;
+        border-radius: 5px;
+        border: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        height: 602px;
+        @media #{$media-movil, $media-iphone} {
+          height: 100%;
+          background: none;
+          border: none;
+          padding: 0 20px;
+        }
+
+        .left {
+          padding-left: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media #{$media-movil, $media-iphone} {
+            padding-left: 0;
+          }
+
+          .steps {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            @media #{$media-movil, $media-iphone} {
+              grid-template-columns: repeat(1, 1fr);
+            }
+
+            & > div {
+              @media #{$media-movil, $media-iphone} {
+                display: flex;
+                flex-wrap: wrap;
+                background: white;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                padding: 20px;
+                border: 1px solid var(--border);
+                h3 {
+                  height: 50px;
+                  margin-top: 0;
+                  font-size: 1.2em;
+                  margin-left: 10px;
+                  display: flex;
+                  align-items: center;
+                }
+                p {
+                  width: 100%;
+                }
+              }
+
+              i {
+                display: flex;
+                background: var(--circle-bg);
+                border-radius: 100%;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+                height: 70px;
+                @media #{$media-movil, $media-iphone} {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+
+        .right {
+          width: 60%;
+          display: flex;
+          justify-content: flex-end;
+          @media #{$media-movil, $media-iphone} {
+            display: none;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  ;
+  }
+}

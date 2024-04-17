@@ -1,0 +1,45 @@
+<section class="am-header">
+  <div class="company-logo">
+    <nuxt-link :to="localePath('index')">
+      <img src="/logo-large.webp" alt="Ambarmotors Logo">
+    </nuxt-link>
+  </div>
+<!--  <div class="search" v-if="!isHome">-->
+<!--    <i>-->
+<!--      <fa icon="search"/>-->
+<!--    </i>-->
+<!--    <div class="search-input">-->
+<!--      <AmSearchCar display='simple-clear'/>-->
+<!--    </div>-->
+<!--  </div>-->
+  <div class="header-mobile">
+    <div class="left">
+      <div class="call-now">
+        <a href="tel:3056143505">
+          <i>
+            <fa icon="phone"/>
+          </i>
+          <span>{{$t('call_now')}}</span>
+        </a>
+      </div>
+    </div>
+    <div class="right">
+
+      <nuxt-link :to="localePath('watchList')">
+        <div class="save-car" v-if="getFavorites.length > 0">
+          <i>
+            <fa icon="heart"/>
+          </i>
+          <span>{{getFavorites.length}}</span>
+        </div>
+      </nuxt-link>
+
+      <div class="show-menu" @click="toggleMobileMenu">
+        <img src="/menu-mobile.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <AmNav class="nav-wrapper"/>
+  <AmNavMobile/>
+</section>
+

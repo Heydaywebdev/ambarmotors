@@ -1,0 +1,12 @@
+<section class='watch-list'>
+  <section class='saved-cars'>
+    <h1 class='saved-cars__title'>{{$t('saved-cars')}}</h1>
+
+    <div class='saved-cars__list'>
+      <div v-for='car in getFavorites'>
+        <AmCarCard :key='car._id' :car='car' v-if='car' />
+      </div>
+    </div>
+  </section>
+</section>
+

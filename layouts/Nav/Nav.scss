@@ -1,0 +1,201 @@
+@import "~/scss/main.scss";
+
+.nav {
+  display: flex;
+  .save-car {
+    display: flex;
+    align-items: center;
+    color:var(--p);
+    i.active{
+      color:var(--primary-green-ligth);
+    }
+    span {
+      margin-left:5px;
+      font-size: .8rem;
+    }
+  }
+  @media #{$media-movil,$media-iphone} {
+    display:none;
+  }
+
+  & > ul {
+    display: flex;
+
+    & > li {
+      margin-left: 20px;
+      color: var(--p);
+      padding:0;
+      position: relative;
+
+      &::after {
+        content: "";
+        background: var(--primary-green);
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        left: 0;
+        transition: ease-in-out .2s;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      a {
+        color: var(--p);
+        font-weight: 500;
+
+        &:hover {
+          color: var(--primary-green);
+        }
+      }
+
+      &.more {
+        position: relative;
+        width: 53px;
+
+        span {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
+          cursor: pointer;
+          font-weight: 500;
+
+          i {
+            color: var(--p);
+          }
+        }
+
+        ul {
+          border: 1px solid var(--border);
+          border-radius: 5px;
+          position: absolute;
+          width: 180px;
+          background: white;
+          right: -26px;
+          z-index: 999999;
+          top: 200%;
+
+          &::after {
+            content: "";
+            background: white;
+            transform: rotate(45deg);
+            border: 1px solid var(--border);
+            border-radius: 5px 0;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 20px;
+            top: -10px;
+          }
+
+          &::before {
+            content: "";
+            background: white;
+            width: 30px;
+            height: 15px;
+            position: absolute;
+            right: 15px;
+            top: 0;
+            z-index: 10;
+          }
+
+          li {
+            margin: 0;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            padding: 20px 20px;
+            position: relative;
+            z-index: 20;
+            &:hover{
+              background: var(--primary-green);
+              a{
+                color:white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .language {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    flex: 1;
+
+    &__active {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        margin: 0 5px;
+        font-size: .8em;
+      }
+    }
+
+    &__select {
+      position: absolute;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      z-index: 999999;
+      padding: 20px 20px;
+      right: 0;
+      width: 130px;
+      top: 200%;
+
+      &::after {
+        content: "";
+        background: white;
+        transform: rotate(45deg);
+        border: 1px solid var(--border);
+        border-radius: 5px 0;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        top: -10px;
+      }
+
+      &::before {
+        content: "";
+        background: white;
+        width: 30px;
+        height: 15px;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        z-index: 99999;
+      }
+
+      ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        li {
+          height: 32px;
+          display: flex;
+          align-items: center;
+
+          img {
+            display: block;
+            margin-right: 10px;
+          }
+
+          a {
+            color: var(--p)
+          }
+        }
+      }
+    }
+  }
+}

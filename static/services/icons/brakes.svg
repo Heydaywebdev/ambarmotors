@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Frenos</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="66.1762882%" x2="0%" y2="25.1738461%" id="linearGradient-1">
+            <stop stop-color="#00520A" offset="0%"></stop>
+            <stop stop-color="#2DA401" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Frenos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CD" transform="translate(2.000000, 2.000000)" fill="url(#linearGradient-1)">
+            <path d="M8,5 C6.343,5 5,6.343 5,8 C5,9.657 6.343,11 8,11 C9.657,11 11,9.657 11,8 C11,6.343 9.657,5 8,5 Z M8,9 C7.447,9 7,8.553 7,8 C7,7.447 7.447,7 8,7 C8.553,7 9,7.447 9,8 C9,8.553 8.553,9 8,9 Z M8,0 C3.582,0 0,3.582 0,8 C0,12.418 3.582,16 8,16 C12.418,16 16,12.418 16,8 C16,3.582 12.418,0 8,0 Z M8,14 C4.687,14 2,11.313 2,8 C2,7.427 2.105,6.884 2.256,6.358 L3.213,6.632 C3.687,4.977 4.978,3.686 6.633,3.212 L6.358,2.256 C6.884,2.105 7.427,2 8,2 C11.313,2 14,4.687 14,8 C14,11.313 11.313,14 8,14 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

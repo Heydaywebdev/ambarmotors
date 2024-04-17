@@ -1,0 +1,377 @@
+<section class='slug' v-if='Car'>
+  <div class='car-info-fixed' :class="{'fixed':isInViewport}">
+    <div class='left'>
+      <img src='/logo-large.png' alt=''>
+    </div>
+    <div class='right'>
+      <div class='car'> {{ Car.Year }} {{ Car.Make }} {{ Car.Model }}</div>
+      <div class='line'></div>
+      <div class='cost' v-if="!Car.archived">
+        <span>${{ carPayment }}/mo</span>
+      </div>
+      <div class='action'>
+        <div class='show-video' v-if='Car.VideosYoutube.length && Car.VideosYoutube[0].ID' @click='showVideoModal = true'>
+          <fa icon='video' />
+          <span>VIDEO</span>
+        </div>
+        <nuxt-link v-if="!Car.archived" :to="localePath({name: 'financingWidget', query: {vin: Car.VIN}})">
+          <AmButton
+            :type="'custom'"
+            textSize='uppercase'
+            :size="'xl'"
+            :width="'100%'"
+            fw='bold'
+            :color="'white'"
+            :text="$t('get_approved')"
+            :bg="'var(--primary-green)'" />
+        </nuxt-link>
+        <a v-else href="tel:+13056143505">
+          <AmButton
+            :type="'custom'"
+            textSize='uppercase'
+            :size="'xl'"
+            :width="'100%'"
+            fw='bold'
+            :color="'white'"
+            text="Call Us: (305) 614-3505"
+            :bg="'var(--primary-green)'" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class='hero'>
+    <div class='save-car'>
+      <div class='show-video'  v-if='Car.VideosYoutube.length && Car.VideosYoutube[0].ID'  @click='showVideoModal = true'>
+        <fa icon='video' />
+        <span>look at the video</span>
+      </div>
+      <div class='phone'>
+        <i>
+          <fa icon='phone' />
+        </i>
+        <span>(305) 614-3505</span>
+      </div>
+      <div class='save' @click='isFavorite ? delFavorite(Car) : addToFavorites(Car)'>
+        <i :class="{'selected' : isFavorite }">
+          <fa icon='heart' />
+        </i>
+      </div>
+    </div>
+    <div class='hero__gallery'>
+      <AmSliderImg :car='Car' />
+    </div>
+  </div>
+  <div class='specifications' ref='specifications'>
+    <div class='wrapper'>
+      <div class='title'>
+        <div class='left'>
+          <h1 class='car-title'>{{ Car.Year }} {{ Car.Make }} {{ Car.Model }}</h1>
+          <span v-if="Car.archived" class="car-sold">{{$t('car_sold')}}</span>
+          <span v-else class="in-stock">{{$t('in_stock')}}</span>
+          <div class='payment-and-price' v-if="!Car.archived">
+            <div class='payment'>
+              <span>${{ carPayment }}.00</span>
+              <span>Monthly Payment</span>
+            </div>
+            <div class='price'>
+              <span>${{ discount }}</span>
+              <div class='price-content'>
+                <span v-if=' Car.RetailPrice.Value > 0'>{{ !Campaign.has ? 'Price balance' : 'Price' }}</span>
+                <div class='terms' v-if='!Campaign.has'>
+                  <small>(terms)</small>
+                  <div class='disclaimer-box am-slim-scroll'>
+                    <AmPriceBalanceDisclaimer :price='Car.RetailPrice.Value' />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='right'>
+          <div class='call-action' v-if="!Car.archived">
+            <nuxt-link :to="localePath('test-drive-slug')">
+              <AmButton :text="$t('test_drive')" type='secondary' textSize='uppercase' fw='600' :size="'l'"
+                        :width="'100%'" />
+            </nuxt-link>
+            <nuxt-link :to="localePath({name: 'financingWidget', query: {vin: Car.VIN}})">
+              <AmButton :text="$t('get_approved')" type='primary' textSize='uppercase' fw='600' :size="'l'"
+                        :width="'100%'" />
+            </nuxt-link>
+          </div>
+          <div class='call-us' v-else>
+            <p class="text">{{$t('call_us')}}</p>
+            <span class="phone-number">(305) 614-3505</span>
+          </div>
+        </div>
+      </div>
+      <ul class='specifications-list'>
+        <li v-if="!Car.archived">
+          <img src='/details/icons/vin.svg' alt='icon-stock'>
+          <div class='info'>
+            <span>VIN</span>
+            <span>{{ Car.VIN }}</span>
+          </div>
+        </li>
+        <li>
+          <img src='/details/icons/stock.svg' alt='icon-stock'>
+          <div class='info'>
+            <span>Stock</span>
+            <span>{{ Car.Stock }}</span>
+          </div>
+        </li>
+        <li>
+          <img src='/details/icons/car.svg' alt=''>
+          <div class='info'>
+            <span>Trim</span>
+            <span>{{ Car.Trim }}</span>
+          </div>
+        </li>
+        <li>
+          <img src='/details/icons/miles.svg' alt='icon-miles'>
+          <div class='info'>
+            <span>Mileage</span>
+            <span>{{ Car.Mileage }} Miles</span>
+          </div>
+        </li>
+        <li>
+          <img src='/details/icons/transmission.svg' alt='icon-transmission'>
+          <div class='info'>
+            <span>Transmission</span>
+            <span>{{ Car.Transmission }}</span>
+          </div>
+        </li>
+        <li>
+          <img src='/details/icons/engine.svg' alt='icon-engine'>
+          <div class='info'>
+            <span>Engine</span>
+            <span>{{ Car.Engine }}</span>
+          </div>
+        </li>
+        <li>
+          <img src='/details/icons/color.svg' alt='icon-color'>
+          <div class='info'>
+            <span>Ext Color</span>
+            <span>{{ Car.ExtColor.color }}</span>
+          </div>
+        </li>
+        <li>
+          <img src='/details/icons/color.svg' alt='icon-color'>
+          <div class='info'>
+            <span>Int Color</span>
+            <span>{{ Car.IntColor.color }}</span>
+          </div>
+        </li>
+        <li>
+          <img src='/details/icons/doors.svg' alt='icon-doors'>
+          <div class='info'>
+            <span>Doors</span>
+            <span>{{ Car.Doors }}</span>
+          </div>
+        </li>
+      </ul>
+      <div class='more-actions'>
+        <AmButton
+          :iconType="'url'"
+          :iconLeft="'/details/availability.svg'"
+          :type="'secondary'"
+          :text="'Availability'"
+          :width="'100%'"
+          @click='toggleAvailabilityModal = true'
+        />
+        <nuxt-link :to="localePath('calculator')">
+          <AmButton
+            :iconType="'url'"
+            :iconLeft="'/details/calculator.svg'"
+            :type="'secondary'"
+            :text="'Calculator'"
+            :width="'100%'" />
+        </nuxt-link>
+      </div>
+    </div>
+  </div>
+  <div class='equipments'>
+    <div class='wrapper'>
+      <header>
+        <i>
+          <fa icon='list' />
+        </i>
+        <h3>EQUIPMENTS</h3>
+      </header>
+      <div class='equipment-list' :class="{'expand': toggleExpandEquipment}" v-if='hasStandardEquipment'>
+        <ul>
+          <li class='am-row' v-for='feature in Car.StandardEquipment'>
+            <span>{{ feature }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class='equipment-list' :class="{'expand': toggleExpandEquipment}" v-else>
+        <div class='safety_features' v-if='equipments.SafetyFeatures.length > 0'>
+          <span class='title'>{{ $t('safety_features') }}</span>
+          <ul>
+            <li class='am-row' v-for='eq in equipments.SafetyFeatures'>
+              <span>{{ eq }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class='int_features' v-if='equipments.IntFeatures.length > 0'>
+          <span class='title'>{{ $t('int_features') }}</span>
+          <ul>
+            <li class='am-row' v-for='eq in equipments.IntFeatures'>
+              <span>{{ eq }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class='ext_features' v-if='equipments.ExtFeatures.length > 0'>
+          <span class='title'>{{ $t('ext_features') }}</span>
+          <ul>
+            <li class='am-row' v-for='eq in equipments.ExtFeatures'>
+              <span>{{ eq }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class='optional_features' v-if='equipments.OptionalFeatures.length > 0'>
+          <span class='title'>{{ $t('optional_features') }}</span>
+          <ul>
+            <li class='am-row' v-for='eq in equipments.OptionalFeatures'>
+              <span>{{ eq }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class='view-all'>
+        <span v-if='!toggleExpandEquipment'
+              @click='toggleExpandEquipment = !toggleExpandEquipment'>More Equipments</span>
+        <span v-else @click='toggleExpandEquipment = !toggleExpandEquipment'>Less Equipments</span>
+      </div>
+    </div>
+  </div>
+  <div class='car-comments'>
+    <div class='wrapper'>
+      <div class='left'>
+        <h2 class='title'>Car comments</h2>
+        <p>{{ Car.Comments }}</p>
+      </div>
+      <div class='right'>
+        <figure>
+          <img :src='carImg' :alt='Car.Year + Car.Make + Car.Model'>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class='warranty'>
+    <div class='wrapper'>
+      <div class='header'>
+        <h2>{{ $t('warranty-t') }}</h2>
+        <p>{{ $t('warranty-p') }}</p>
+      </div>
+      <div v-if='$device.isDesktop' class='tabs'>
+        <div class='left'>
+          <ul>
+            <li :class="{'selected': $t(`warranty-tabs-t${t}`) === warrantyTabs }" v-for='t in 8'
+                @click='warrantyTabContent($t(`warranty-tabs-t${t}`))'>
+              {{ $t(`warranty-tabs-t${t}`) }}
+            </li>
+          </ul>
+        </div>
+        <div class='right'>
+          <p v-for='p in 8' class='l' v-if='$t(`warranty-tabs-t${p}`) === warrantyTabs'>
+            {{ $t(`warranty-tabs-p${p}`) }}</p>
+        </div>
+      </div>
+      <div v-if='$device.isMobile' class='tabs-mobile'>
+        <ul>
+          <li :class="{'selected': $t(`warranty-tabs-t${t}`) === warrantyTabs }" v-for='t in 8'
+              @click='warrantyTabContent($t(`warranty-tabs-t${t}`))'>
+            <div class='item'>
+              {{ $t(`warranty-tabs-t${t}`) }}
+              <i>
+                <fa icon='check' />
+              </i>
+            </div>
+            <div v-if='$t(`warranty-tabs-t${t}`) === warrantyTabs' class='content'>
+              <p>{{ $t(`warranty-tabs-p${t}`) }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class='similar'>
+    <div class='wrapper'>
+      <div class='header'>
+        <h2>{{ $t('similar-t') }}</h2>
+      </div>
+      <AmCarSimilars :car='Car' />
+    </div>
+  </div>
+  <div class='disclosure'>
+    <div class='wrapper'>
+      <AmDisclosure />
+    </div>
+  </div>
+  <Modal v-if='toggleAvailabilityModal' :close='() => toggleAvailabilityModal = false'>
+    <header slot='header' class='am-modal-header'>
+      <h3>{{ $t('modal-t') }}</h3>
+      <!-- <p>{{$t('modal-p')}}</p> -->
+    </header>
+    <div slot='body' class='am-modal-body'>
+      <div class='controls-wrapper'>
+        <div>
+          <input type='text' v-validate="'alpha|required'" v-model='availability.FirstName' name='first_name'
+                 :placeholder="$t('first_name')">
+          <span class='validation_error'>{{ errors.first('first_name') }}</span>
+        </div>
+
+        <div>
+          <input type='text' v-validate="'alpha'" v-model='availability.MiddleName' name='middle_name'
+                 :placeholder="$t('middle_name')">
+          <span class='validation_error'>{{ errors.first('middle_name') }}</span>
+        </div>
+
+        <div>
+          <input type='text' v-validate="'alpha_spaces|required'" v-model='availability.LastName' name='last_name'
+                 :placeholder="$t('last_name')">
+          <span class='validation_error'>{{ errors.first('last_name') }}</span>
+        </div>
+
+        <div>
+          <input type='text' v-validate="'email|required'" v-model='availability.Email' name='email'
+                 :placeholder="$t('email')">
+          <span class='validation_error'>{{ errors.first('email') }}</span>
+        </div>
+
+        <div>
+          <input type='text' v-validate="'digits:10|required'" v-model='availability.Phone' name='phone'
+                 :placeholder="$t('phone')">
+          <span class='validation_error'>{{ errors.first('phone') }}</span>
+        </div>
+      </div>
+
+      <div class='textarea'>
+        <textarea id='' cols='30' rows='10' v-validate="'alpha_spaces|required'" v-model='availability.Comments'
+                  name='comments' :placeholder="$t('comments')"></textarea>
+        <span class='validation_error'>{{ errors.first('comments') }}</span>
+      </div>
+
+      <div class='action'>
+        <AmButton
+          @click='checkAvailability'
+          :type="'primary'"
+          :text="$t('check_availability')" textSize='uppercase' />
+      </div>
+    </div>
+  </Modal>
+
+  <Modal v-if='showVideoModal' width='auto' padding='0' :close='() => closeVideoModal()'>
+    <div slot='body' class='video-modal'>
+      <iframe width='100%' height='100%' :src='carVideo' title='YouTube video player' frameborder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowfullscreen></iframe>
+    </div>
+  </Modal>
+</section>
+

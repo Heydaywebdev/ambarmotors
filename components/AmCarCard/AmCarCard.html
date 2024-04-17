@@ -1,0 +1,62 @@
+<section class='am-car-card'>
+  <div class='square' :class="{'first-car': firstCar}">
+    <div class='terms' v-if='!Campaign.has'>
+      <div ref="disclaimerTextRef" class='show-terms'>(*terms)</div>
+      <div ref="disclaimerBoxRef" class='disclaimer-box am-slim-scroll'>
+        <AmPriceBalanceDisclaimer :price='car.RetailPrice.Value' />
+      </div>
+    </div>
+    <div class='save' @click='isFavorite ? delFavorite(car) : addToFavorites(car)'>
+      <i :class="{'selected' : isFavorite }">
+        <fa icon='heart' />
+      </i>
+    </div>
+    <div class='compare' :class="{'selected' : isCompared}" v-if='isComparing'
+         @click='isCompared ? delCompared(car) : addToCompared(car)'>
+      <i>
+        <fa icon='check' />
+      </i>
+      <label :for='car.VIN'>Compare</label>
+    </div>
+    <figure>
+      <img :src='carImg' :alt='`${car.Year} ${car.Make} ${car.Model} car for sale in miami`'>
+    </figure>
+
+    <div class='car'>
+      <div class='car__title'>
+        <span>{{ car.Year }} | {{ car.Make }}</span>
+        <span>{{ car.Model }}</span>
+      </div>
+      <div class='car__price-and-payment'>
+        <div class='payment'>
+          <span>Monthly payment</span>
+          <span v-if=' car && car.RetailPrice.Value > 0 '>${{ carPayment }}</span>
+        </div>
+        <div class='price'>
+          <span v-if=' car.RetailPrice.Value > 0'>{{ !Campaign.has ? '*Price balance' : 'Price' }}</span>
+          <span v-else>Call For More Info!</span>
+          <span v-if=' car.RetailPrice.Value > 0 '>${{ discount }}</span>
+        </div>
+      </div>
+      <div class="car__btn-actions">
+        <nuxt-link :to="localePath({name: 'financingWidget', query: {vin: car.VIN}})">
+          <AmButton :text="$t('get_approved')" type='primary' textSize='uppercase' fw='600' :size="'l'"
+                    :width="'100%'"/>
+        </nuxt-link>
+        <!-- Prequal Navigator Checkout -->
+        <button
+          class="capital-one-prequalification-button"
+          data-client-token="9e35f570-4188-4140-8898-3129bed43331"
+          data-sales-price=""
+          :data-vehicle-image-url="carImg"
+          :data-vin="car.VIN"
+        >
+          Explore Financing
+        </button>
+      </div>
+    </div>
+    <nuxt-link :to="localePath('inventory') + '/' + getSlug(car)" class='am-car-card__link'></nuxt-link>
+  </div>
+  <style type='text/css'>.capital-one-prequalification-button { display: none; }</style>
+  <script defer src="https://auto-digital-retail.capitalone.com/loader.js" charset="utf-8"></script>
+</section>

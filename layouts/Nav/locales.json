@@ -1,0 +1,34 @@
+{
+  "en": {
+    "login": "Log In",
+    "home": "Home",
+    "vehicles": "Shop Car",
+    "sell-car": "Sell/Trade",
+    "assurance": "Assurance",
+    "financing": "Financing",
+    "services": "Services",
+    "about": "About",
+    "spanish": "Spanish",
+    "english": "English",
+    "more": "More",
+    "calculator": "Calculator",
+    "contact" : "Contact Us",
+    "capitalOne": "Get Pre-qualified with Capital One"
+  },
+  "es": {
+    "login": "Entrar",
+    "home": "Inicio",
+    "vehicles": "Comprar",
+    "sell-car": "Vender/Cambiar",
+    "assurance": "Garantia",
+    "financing": "Financiamiento",
+    "services": "Servicios",
+    "about": "Acerca de",
+    "spanish": "Español",
+    "english": "Ingles",
+    "more": "Mas",
+    "calculator": "Calculadora",
+    "contact": "Contactanos",
+    "capitalOne": "Precalificación con Capital One"
+  }
+}

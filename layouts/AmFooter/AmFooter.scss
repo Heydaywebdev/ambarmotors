@@ -1,0 +1,75 @@
+@import "~/scss/main.scss";
+.am-footer {
+  padding:100px 0 30px 0;
+  border-top:1px solid var(--border);
+  @media #{$media-movil, $media-iphone} {
+    padding:20px;
+  }
+  .links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-bottom:1px solid var(--border);
+    padding-bottom:20px;
+    margin-bottom: 20px;
+    @media #{$media-movil, $media-iphone} {
+      grid-template-columns: 1fr;
+    }
+
+    & > div {
+      .logo {
+        width: 150px;
+        margin-bottom: 40px;
+        @media #{$media-movil, $media-iphone} {
+          margin-bottom: 10px;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .socials {
+        width: 150px;
+        @media #{$media-movil, $media-iphone} {
+          margin-bottom: 20px;
+        }
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+          li{
+            i{
+              color:var(--p);
+            }
+          }
+        }
+      }
+
+      h4 {
+        color: var(--primary-green);
+        margin-bottom: 20px;
+        font-weight: bold;
+        @media #{$media-movil, $media-iphone} {
+          margin-bottom: 10px;
+        }
+      }
+
+      & > ul {
+        li {
+          height: 40px;
+        }
+      }
+    }
+  }
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media #{$media-movil, $media-iphone} {
+      font-size: .7rem;
+      text-align: center;
+    }
+  }
+}

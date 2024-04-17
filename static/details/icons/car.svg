@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>door</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="63.1027935%" x2="0%" y2="29.8908154%" id="linearGradient-1">
+            <stop stop-color="#00520A" offset="0%"></stop>
+            <stop stop-color="#2DA401" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="door" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M40.625,18 L40.625,14.25 C40.625,8.03625 36.428125,3 31.25,3 L9.375,3 C7.646875,3 6.25,4.67625 6.25,6.75 L6.25,18.69 C2.61875,20.23875 0,24.35625 0,29.25 L0,36.75 C0,38.82375 1.396875,40.5 3.125,40.5 C3.125,44.64 5.925,48 9.375,48 C12.825,48 15.625,44.64 15.625,40.5 L34.375,40.5 C34.375,44.64 37.175,48 40.625,48 C44.075,48 46.875,44.64 46.875,40.5 C48.603125,40.5 50,38.82375 50,36.75 L50,29.25 C50,23.03625 45.803125,18 40.625,18 Z M21.875,9 L31.25,9 C32.978125,9 34.375,11.0115 34.375,13.5 L34.375,18 L21.875,18 L21.875,9 Z M12.5,9 L18.75,9 L18.75,18 L12.5,18 L12.5,9 Z M43.75,34 L6.25,34 L6.25,29.5 C6.25,27.0115 7.646875,25 9.375,25 L40.625,25 C42.353125,25 43.75,27.0115 43.75,29.5 L43.75,34 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

@@ -1,0 +1,82 @@
+@import "~/scss/main.scss";
+
+.compare {
+
+  &__container{
+    .header{
+      margin: 40px 0;
+      background: var(--primary-green);
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+      font-size: 1.7em;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: default;
+    }
+    .cars{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+
+      &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .icons{
+          flex: 1;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 5px;
+          width: 100%;
+          background: white;
+          border: 1px solid var(--border);
+          box-shadow: var(--box-shadow-gray);
+          margin: 10px 0;
+          border-radius: 10px;
+          padding: 15px;
+          .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & > span{
+              text-align: center;
+              font-size: .9em;
+            }
+          }
+        }
+      }
+      @media #{$media-movil} {
+        grid-template-columns: repeat(4, 203px);
+        overflow: auto;
+      }
+      @media #{$media-iphone} {
+        grid-template-columns: repeat(4, 203px);
+        overflow: auto;
+      }
+    }
+
+  }
+}
+@media #{$media-movil} {
+  .compare{
+    &__container{
+      .header{
+        font-size: 1.4em;
+        padding: 15px 0;
+      }
+      padding: 10px;
+    }
+  }
+}
+@media #{$media-iphone} {
+  .compare{
+    &__container{
+      padding: 10px;
+      .header{
+        font-size: 1.4em;
+        padding: 15px 0;
+      }
+    }
+  }
+}

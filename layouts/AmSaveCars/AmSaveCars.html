@@ -1,0 +1,12 @@
+
+<section class="am-save-cars">
+  <div v-for="c in getFavorites">
+    <nuxt-link :to="localePath('inventory') + '/' + getSlug(c)" class="car" >
+      <img :src="getImageUrl(c)" alt="">
+      <span>{{c.Year}} {{c.Make}} {{c.Model}}</span>
+      <span>${{discount(c)}}</span>
+      <span>{{c.Mileage}} miles</span>
+    </nuxt-link>
+  </div>
+</section>
+

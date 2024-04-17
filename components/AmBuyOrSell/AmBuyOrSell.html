@@ -1,0 +1,44 @@
+<section class="am-buy-or-sell container">
+  <h2>Why Buy Orr Sell With Us?</h2>
+  <div class="select-box">
+    <span @click="SelectBox = 'buying'"  :class="{selected: SelectBox === 'buying'}">Buying</span>
+    <span @click="SelectBox = 'selling'" :class="{selected: SelectBox === 'selling'}">Selling</span>
+  </div>
+  <div v-if="SelectBox === 'buying'" class="box-buying">
+    <div class="box-item">
+      <i>i</i>
+      <h3>We're Focused On You</h3>
+      <p>No matter where you are going, we will help you find the right car to get you there.</p>
+    </div>
+    <div class="box-item">
+      <i>i</i>
+      <h3>BUY WITH CONFIDENCE</h3>
+      <p>We offer a 3-day exchange policy to help you feel confident with your new car purchace.</p>
+    </div>
+    <div class="box-item">
+      <i>i</i>
+      <h3>THERE’S NO HAGGLING</h3>
+      <p>We have a large inventory selection to choose from.</p>
+    </div>
+  </div>
+  <div v-if="SelectBox === 'selling'"  class="box-selling">
+    <div class="box-item">
+      <i>i</i>
+      <h3>WE'LL BUY ANY CAR</h3>
+      <p>Get an offer for your car no matter the make, model, or mileage. Yes, we just like cars that much.</p>
+    </div>
+    <div class="box-item">
+      <i>i</i>
+      <h3>WE'RE QUICK WITH APPRAISALS</h3>
+      <p>Our free appraisals take as little as 30 minutes. We know your time is important, and we’ll make the most of
+        it.</p>
+    </div>
+    <div class="box-item">
+      <i>i</i>
+      <h3>WE MAKE GREAT OFFERS</h3>
+      <p>Guaranteed for seven days at any Ambar Motors. Mull yours over or walk out with payment in hand.</p>
+    </div>
+  </div>
+  <button>Shop Now</button>
+</section>
+

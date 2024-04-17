@@ -1,0 +1,24 @@
+{
+  "en": {
+    "first_name": "First Name",
+    "middle_name": "Middle Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "comments": "Comments",
+    "test-t": "Schedule your test drive",
+    "btn_send": "Schedule Now",
+    "right-p": "The test drive is one of the best part of car shopping. Making an appointment only takes a few minutes! A member of our staff will accompany you to explain and provide insight on the cars features."
+  },
+  "es": {
+    "first_name": "Nombre",
+    "middle_name": "Segundo Nombre",
+    "last_name": "Apellidos",
+    "email": "Correo",
+    "phone": "Telefono",
+    "comments": "Comentarios",
+    "btn_send": "Agenda Ahora",
+    "test-t": "Agenda tu cita de manejo",
+    "right-p": "La prueba de manejo es la mejor parte de la compra de automóviles. ¡Hacer una cita solo toma unos minutos! un miembro de nuestro equipo lo acompañará para explicarle y proporcionarle información sobre las características de los vehículos."
+  }
+}

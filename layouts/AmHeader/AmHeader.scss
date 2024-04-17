@@ -1,0 +1,109 @@
+@import "~/scss/main.scss";
+
+.am-header {
+  height: 80px;
+  display: flex;
+  background: white;
+  //justify-content: space-between;
+  align-items: center;
+  padding: 0 55px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999999;
+  top: 0;
+
+  .header-mobile {
+    display: none;
+
+    .right {
+      display: flex;
+
+      .save-car {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  @media #{$media-laptop} {
+    height: 70px;
+  }
+  @media #{$media-movil, $media-iphone} {
+    height: 70px;
+    padding: 0 20px;
+    justify-content: flex-start;
+    .header-mobile {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+        margin-left: 10px;
+
+        .call-now {
+          background: var(--primary-green);
+          border-radius: 5px;
+          padding: 5px 10px;
+
+          span {
+            color: #fff;
+            font-weight: bold;
+            font-size: .8rem;
+          }
+
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  @media #{$media-iphone} {
+    height: 70px;
+    padding: 0 20px;
+    justify-content: flex-start;
+    .header-mobile {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > div {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .company-logo {
+    img {
+      width: 120px; // Default size is 120px. 150px it's only for christmas logo.
+      display: block;
+      @media #{$media-laptop} {
+        width: 90px;
+      }
+      @media #{$media-movil, $media-iphone} {
+        width: 80px;
+      }
+    }
+
+  }
+
+  .search {
+    flex: 1;
+    display: flex;
+    margin: 0 30px;
+    align-items: center;
+    @media #{$media-movil, $media-iphone} {
+      display: none;
+    }
+
+    .search-input {
+      width: 400px;
+    }
+  }
+
+  .nav-wrapper{
+    flex:1;
+  }
+}

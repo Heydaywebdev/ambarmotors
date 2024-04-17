@@ -1,0 +1,32 @@
+{
+    "en": {
+      "hero-t":"Warranty",
+      "hero-sub-t": "Up to 200,000 miles",
+      "hero-b": "Select your favorite car",
+      "section1-t": "Exceptional benefits",
+      "section1-p": "We offer a great buying experience for everyone. That is why we have the best benefits in the market.",
+      "section1-item1-t": "Financing",
+      "section1-item2-t": "Approval",
+      "section1-item3-t": "Registration",
+      "section1-item4-t": "Co-signer",
+      "section1-item1-p": "We have the best financing rates available",
+      "section1-item2-p": "Approval in just five minutes!",
+      "section1-item3-p": "In house vehicle registration made easy",
+      "section1-item4-p": "We can be your co-signer so you can drive away in a new car"
+    },
+    "es": {
+      "hero-t":"Garantía",
+      "hero-sub-t": "Hasta 200,000 millas",
+      "hero-b": "Seleccione su auto favorito",
+      "section1-t": "Benficios excepcionales",
+      "section1-p": "Construimos una experiencia de compra de automóviles para todos.  Por eso ofrecemos los mejores beneficios del mercado",
+      "section1-item1-t": "Financiamiento",
+      "section1-item2-t": "Aprobación",
+      "section1-item3-t": "Registro Agil",
+      "section1-item4-t": "Codeudor",
+      "section1-item1-p": "Contamos con las mejores tasas y tarifas de financiamiento",
+      "section1-item2-p": "Revisión y respuesta financiera en solo 5 minutos",
+      "section1-item3-p": "Haremos el registro de su vehículo y matrícula lo más ágil posible",
+      "section1-item4-p": "Seremos Su Codeudor Para Que Salga Manejando sin problemas"
+    }
+}

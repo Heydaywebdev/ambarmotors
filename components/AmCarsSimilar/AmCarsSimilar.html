@@ -1,0 +1,16 @@
+<section class="am-cars-similar">
+  <div class="desktop">
+    <carousel :per-page="4" :centerMode="true" :paginationEnabled="false" :mouse-drag="true" :autoplay="true" :autoplayTimeout="5000" :loop="true">
+      <slide   v-for="c in cars" :key="c.VIN">
+        <AmCarCard :car="c" />
+      </slide>
+    </carousel>
+  </div>
+  <div class="mobile">
+    <carousel :per-page="1" :centerMode="true" :paginationEnabled="false" :mouse-drag="true" :autoplay="true" :autoplayTimeout="5000" :loop="true">
+      <slide   v-for="c in cars" :key="c.VIN">
+        <AmCarCard :car="c" />
+      </slide>
+    </carousel>
+  </div>
+</section>

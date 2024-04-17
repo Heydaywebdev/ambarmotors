@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>car-drive</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="66.1762882%" x2="0%" y2="25.1738461%" id="linearGradient-1">
+            <stop stop-color="#00520A" offset="0%"></stop>
+            <stop stop-color="#2DA401" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="car-drive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10,0 C4.4775,0 0,4.4775 0,10 C0,15.5225 4.4775,20 10,20 C15.5225,20 20,15.5225 20,10 C20,4.4775 15.5225,0 10,0 Z M10,2.5 C13.71375,2.5 16.77625,5.20625 17.37375,8.75 L13.52,8.75 C13.00375,7.2975 11.63125,6.25 10,6.25 C8.36875,6.25 6.99625,7.2975 6.48,8.75 L2.62625,8.75 C3.22375,5.20625 6.28625,2.5 10,2.5 Z M8.75,17.38625 C5.61625,16.8575 3.155,14.38625 2.62625,11.25 L6.48,11.25 C6.85625,12.31125 7.68875,13.14375 8.75,13.52 L8.75,17.38625 Z M10,11.25 C9.30875,11.25 8.75,10.69125 8.75,10 C8.75,9.30875 9.30875,8.75 10,8.75 C10.69125,8.75 11.25,9.30875 11.25,10 C11.25,10.69125 10.69125,11.25 10,11.25 Z M11.25,17.38625 L11.25,13.52 C12.31125,13.14375 13.14375,12.31125 13.52,11.25 L17.37375,11.25 C16.845,14.38625 14.38375,16.8575 11.25,17.38625 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

@@ -1,0 +1,29 @@
+{
+    "en": {
+      "hero-t":  "What is a CarFax report and what  do i need to know?",
+      "hero-p": "Carfax is a useful tool. However, many people don't realize that Carfax has never inspected a single vehicle that they provide a report on. Also, please note that a Carfax report can change after your date of purchase. So, A decision based solely off of a Carfax report is not a good idea. Always judge the vehicle of interest on its current  condition, not past history.",
+      "description1-t": "Total Loss",
+      "description2-t": "Accident Demage",
+      "description3-t": "Buyback/Lemon",
+      "description4-t": "Odometer Check",
+      "description5-t": "Manufacturer Recall",
+      "description6-t": "Airbag Deployment",
+      "description7-t": "Basic Warranty",
+      "description8-t": "Structural Damage*",
+      "description1-p": "An insurance or fleet company declares a vehicle a total loss when a claim exceeds approximately 75% of its pre-damage value or if the vehicle is stolen and not recovered. This damage threshold varies by company. These companies typically take possession and obtain the title. Not  all total loss vehicles result in a DMV- reported branded title, like a Salvage or  Junk title. See the glossary for more information.",
+      "description2-p": "Various events could indicate an accident or damage in a vehicle's history, such as:  salvage auction, fire damage, police- reported accident, crash test vehicle,  damage disclosure, collision repair facility and automotive recycler records. See the glossary for more information.",
+      "description3-p": "A DMV or a state agency marks an official document or issues a Manufacturer Buyback/Lemon title when a vehicle has been repurchased by the manufacturer. Not all states issue manufacturer buyback titles and the specific requirements for a lemon law vehicle varies by state.",
+      "description4-p": "CARFAX analyzes mileage data to help identify potential: > Rollbacks - odometer tampering to conceal a car's true mileage (i.e. Fraud or illegal activity) > Rollovers - after reaching the maximum reading, the odometer restarts from zero (i.e. Mechanical or equipment limitation) > Inconsistencies - conflicting mileage data means CARFAX cannot determine if it's a potential rollback (i.e. Potential human error)",
+      "description5-p": "Automobile manufacturers issue recall notices to inform owners of car defects that have come to the manufacturer's attention. Recalls also suggest improvements that can be made to improve the safety of a particular vehicle. Most manufacturer recalls can be repaired at no cost to you.",
+      "description6-p": "Occurs when the driver, passenger or side airbag has been used or deployed during a crash or other incident. If an airbag has been deployed, it must be replaced by a qualified technician. Have this car inspected by a mechanic prior to purchase.",
+      "description7-p": "Most manufacturers offer a basic warranty for new vehicles. These warranties vary by manufacturer and typically last for a certain amount of time and/or a set number of miles.",
+      "description8-p": "All levels of accidents, from minor to severe, can cause structural damage to a vehicle (i.e., damage to the frame or unibody). *",
+      "section1-p1": "Discloses \"Previous Accident\" on any car with an Air bag deployed on Carfax or Auto check, Severe damage on Carfax or Auto Check, Any Unibody or Structural announced car at any auction regardless of what Auto Check or Carfax says.",
+      "section1-p2": "* Auction announcements of structural damage are in the form of words such as Airbag/ Unibody/ Frame/ Structural based on NAAA Auction Arbitration Rules. This simply means that the car has been in a previous accident and has sustained damage at one time. There is no distinction between a minor dent or a major accident when it comes to the use of these words. Due to Unibody construction, any vehicle that sustains any damage can be considered, even if the accident is as minor as an 1/8 inch-1 inch dent to the body or structure of the vehicle, or something much more serious.",
+      "section1-t": "ALL THE CARS WE SELL ARE FREE OF FLOOD, SALVAGE OR REBUILT HISTORY.",
+      "section1-p3": "All cars qualify for the Carfax Buyback Guarantee, unless otherwise noted.",
+      "section1-check": "BY CHECKING THIS BOX I UNDERSTAND THAT A CARFAX REPORT IS SUBJECT TO CHANGE AT ANY TIME WITHOUT NOTICE."
+    },
+    "es": {
+    }
+}

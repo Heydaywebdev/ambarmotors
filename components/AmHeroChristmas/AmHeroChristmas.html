@@ -1,0 +1,21 @@
+
+<section class="am-hero">
+  <div class="wrapper">
+    <div class="left">
+      <span class="company-name">AMBARMOTORS</span>
+      <h1>{{$t('title1')}}</h1>
+      <div class="search">
+        <AmSearchCar display='simple'/>
+      </div>
+      <div class="browse-all">
+        <nuxt-link :to="localePath('inventory')">
+          {{$t('browse_all')}}
+        </nuxt-link>
+      </div>
+    </div>
+    <div class='right'>
+      <img src="/home/gift-car.png" alt="">
+    </div>
+  </div>
+</section>
+

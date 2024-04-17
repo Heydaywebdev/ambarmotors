@@ -1,0 +1,204 @@
+@import "~/scss/main.scss";
+
+.about {
+  position: relative;
+
+  .hero {
+    background: url('/about/bg-about.png') no-repeat center / cover;
+    height: 700px;
+
+    .am-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      padding-top: 90px;
+
+      h1 {
+        color: white;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: white;
+        text-align: justify;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .fixed-block {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 320px;
+
+    .am-container {
+      padding: 50px;
+      height: 100%;
+      background: white;
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+
+
+      h3 {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin: 20px 0;
+      }
+
+
+    }
+  }
+
+  .partners,
+  .reputation {
+    .wrapper {
+      padding: 90px 0;
+      text-align: center;
+
+      h2 {
+        font-weight: bold;
+      }
+
+      p {
+        margin: 40px 0;
+        white-space: pre-wrap;
+        font-size: 1.5rem;
+      }
+
+      .am-icons-container {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        figure {
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    .am-block-footer {
+      margin: 70px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .reputation {
+    background: white;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+
+@media #{$media-movil, $media-iphone}{
+  .about {
+    .hero {
+      background: url('/about/bg-about.png') no-repeat center / cover;
+      height: 250px;
+
+      .am-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 40px;
+
+        h1 {
+          color: white;
+          margin-bottom: 20px;
+        }
+
+        p {
+          width: 100%;
+          color: white;
+          text-align: center;
+        }
+      }
+    }
+
+    & > .fixed-block {
+      width: 100%;
+      height: auto;
+      position: static;
+      top: 0;
+      .am-container {
+        padding: 50px;
+        height: 100%;
+        background: white;
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+
+        h3 {
+          font-size: 1rem;
+          margin: 15px 0 0 0;
+        }
+        p{
+          text-align: initial;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .partners,
+    .reputation {
+      .wrapper {
+        padding: 10px 20px;
+        text-align: center;
+
+        h2 {
+          font-weight: bold;
+          font-size: 1.8em;
+          line-height: 30px;
+        }
+
+        p {
+          text-align: justify;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
+
+        & > .am-icons-container {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          & > figure {
+            margin: 15px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+
+      .am-block-footer {
+        margin: 30px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .am-block {
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}

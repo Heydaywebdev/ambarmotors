@@ -1,0 +1,54 @@
+<section class="am-car-compare">
+  <div class="square">
+    <div class="save" @click="">
+      <i :class="{'selected' : isFavorite }"><fa icon="heart" /></i>
+    </div>
+    <div class="delete" @click="onDeleteCar">
+      <i><fa icon="trash" /></i>
+    </div>
+
+    <figure>
+      <!--<img v-if="car.Images[0]" :src="`http://localhost:4003/api/files/${car.Images[0].File}`" alt="">-->
+      <!--<img src="https://shiftcars1.imgix.net/content/con1UejFEwfqNS4CLzuVzAna4nEshQaoTBuEAbvsgB58AacGA2pmOr?w=1600&h=&auto=format%2Ccompress" alt="">-->
+      <img :src="carImg" alt="">
+      <!--<img src="/car.png" alt="">-->
+    </figure>
+
+    <nuxt-link :to="localePath('inventory') + '/' + getSlug(car)" exact-active-class="is-active">
+      <div class="car">
+        <div class="car__title">
+          <span>{{ car.Year }} | {{car.Make}}</span>
+          <span>{{ car.Model}}</span>
+        </div>
+        <div class="car__price-and-payment">
+          <div class="payment">
+            <span>Monthly payment</span>
+            <span v-if=" car.Price > 0 ">${{ carPayment }}</span>
+          </div>
+          <div class="price">
+            <span v-if=" car.Price > 0 ">Price balance</span>
+            <span v-else>Call For More Info!</span>
+            <span v-if=" car.Price > 0 ">${{ car.Price.Value }}</span>
+          </div>
+        </div>
+      </div>
+    </nuxt-link>
+
+  </div>
+  <div class="equipments">
+    <h3>Fuel Efficient</h3>
+    <span v-if="car.MPGCity">{{car.MPGCity}} City MPG</span>
+    <span v-if="car.MPGHighway">{{car.MPGCity}} MPGHighway MPG</span>
+    <!--<span v-if="true">{{16}} City MPG</span>-->
+    <!--<span v-if="true">{{21}} MPGHighway MPG</span>-->
+    <span>Available at Ambar Motors</span>
+    <span class="lines" v-if="car.Stock"><strong>Stock:</strong> {{car.Stock}}</span>
+    <span class="lines" v-if="car.VIN"><strong>VIN:</strong> {{car.VIN}}</span>
+    <span class="lines" v-if="car.Transmission"><strong>Transmission:</strong> {{car.Transmission}}</span>
+    <span class="lines" v-if="car.Mileage"><strong>Mileage:</strong> {{car.Mileage}} Miles</span>
+    <span class="lines" v-if="car.IntColor && car.IntColor.color"><strong>Interior:</strong> {{car.IntColor.color}}</span>
+    <span class="lines" v-if="car.Body"><strong>Body:</strong> {{car.Body}}</span>
+    <span class="lines" v-if="car.Doors"><strong>Doors:</strong> {{car.Doors}} Doors</span>
+  </div>
+</section>
+
