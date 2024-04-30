@@ -64,11 +64,15 @@
     <div>
       <h4>{{ $t('contact-title') }}</h4>
       <ul>
-        <li>{{ $t('contact-t1') }}</li>
         <li>
           <a onclick="return gtag_report_conversion('tel:(305) 827-8484');" href="tel:(305) 827-8484">
-            {{ $t('contact-t2') }}
+            {{ $t('contact-t1') }}
           </a>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('contact')">
+            {{ $t('contact-t2') }}
+          </nuxt-link>
         </li>
       </ul>
     </div>
