@@ -1,6 +1,6 @@
 const pkg = require('./package')
 const server = '0.0.0.0'
-const port = 3000
+const port = 5000
 
 module.exports = {
   telemetry: false,
