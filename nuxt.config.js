@@ -1,6 +1,6 @@
 const pkg = require('./package')
 const server = '0.0.0.0'
-const port = 5000
+const port = 3000
 
 module.exports = {
   telemetry: false,
@@ -32,6 +32,32 @@ module.exports = {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Carter+One|Fondamento|Frank+Ruhl+Libre|Roboto&display=swap'
+      }
+    ],
+
+    script: [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=AW-1003773781',
+        async: true
+      },
+      {
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-1003773781');
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      },
+      {
+        innerHTML: `
+          gtag('config', 'AW-1003773781/mTEACPfUwKIZENW-0d4D', {
+            'phone_conversion_number': '(305) 827-8484'
+          });
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
       }
     ]
   },
