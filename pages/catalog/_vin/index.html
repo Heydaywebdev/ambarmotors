@@ -74,9 +74,9 @@
               <span>Monthly Payment</span>
             </div>
             <div class='price'>
-              <span>${{ discount }}</span>
+              <span>${{ discount.toLocaleString('es') }}</span>
               <div class='price-content'>
-                <span v-if=' Car.RetailPrice.Value > 0'>{{ !Campaign.has ? 'Price balance' : 'Price' }}</span>
+                <span v-if=' Car.RetailPrice.Value > 0'>{{ !Campaign.has ? 'Sale price' : 'Price' }}</span>
                 <div class='terms' v-if='!Campaign.has'>
                   <small>(terms)</small>
                   <div class='disclaimer-box am-slim-scroll'>
