@@ -76,15 +76,16 @@
             <div class='price'>
               <span>${{ discount.toLocaleString('es') }}</span>
               <div class='price-content'>
-                <span v-if=' Car.RetailPrice.Value > 0'>{{ !Campaign.has ? 'Sale price' : 'Price' }}</span>
-                <div class='terms' v-if='!Campaign.has'>
-                  <small>(terms)</small>
-                  <div class='disclaimer-box am-slim-scroll'>
-                    <AmPriceBalanceDisclaimer :price='Car.RetailPrice.Value' />
+                  <span v-if=' Car.RetailPrice.Value > 0'>{{ !Campaign.has ? 'Sale price' : 'Price' }}</span>
+                  <div class='terms' v-if='!Campaign.has'>
+                      <small>(terms)</small>
+                      <div class='disclaimer-box am-slim-scroll'>
+                          <!-- Cambio: Cambiar "price balance" a "sale price" -->
+                          <AmPriceBalanceDisclaimer :price='Car.RetailPrice.Value' />
+                      </div>
                   </div>
-                </div>
               </div>
-            </div>
+          </div>
           </div>
         </div>
         <div class='right'>
