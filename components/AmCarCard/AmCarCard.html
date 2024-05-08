@@ -35,7 +35,7 @@
         <div class='price'>
           <span v-if=' car.RetailPrice.Value > 0'>{{ !Campaign.has ? '*Sale price' : 'Price' }}</span>
           <span v-else>Call For More Info!</span>
-          <span v-if=' car.RetailPrice.Value > 0 '>${{ discount }}</span>
+          <span v-if=' car.RetailPrice.Value > 0 '>${{ discount.toLocaleString('es') }}</span>
         </div>
       </div>
       <div class="car__btn-actions">
