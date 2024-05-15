@@ -94,8 +94,10 @@ export default {
     navLink(link) {
       // Verifica si link.to es una cadena (indicando un enlace externo)
       if (typeof link.to === 'string') {
+        console.log('Enlace externo:', link.to); // Imprime el enlace externo en la consola
         window.location.href = link.to; // Redirecciona a la URL externa
       } else {
+        console.log('Ruta interna:', link.to); // Imprime la ruta interna en la consola
         this.$router.push(link.to); // Navega a la ruta interna
       }
     }

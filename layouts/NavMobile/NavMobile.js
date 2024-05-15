@@ -63,11 +63,11 @@ export default {
 
     navLink(link) {
       this.toggleMobileMenu();
-      // Verifica si link.to es una cadena (indicando un enlace externo)
       if (typeof link.to === 'string') {
-        window.location.href = link.to; // Redirecciona a la URL externa
+        console.log('Enlace externo:', link.to); // <-- Agrega este console.log
+        window.location.href = link.to;
       } else {
-        this.$router.push(link.to); // Navega a la ruta interna
+        this.$router.push(link.to);
       }
     }
   }
