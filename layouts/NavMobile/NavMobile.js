@@ -64,9 +64,10 @@ export default {
     navLink(link) {
       this.toggleMobileMenu();
       if (typeof link.to === 'string') {
-        console.log('Enlace externo:', link.to); // <-- Agrega este console.log
+        console.log('Enlace externo:', link.to);
         window.location.href = link.to;
       } else {
+        console.log('Ruta interna:', link.to);
         this.$router.push(link.to);
       }
     }
