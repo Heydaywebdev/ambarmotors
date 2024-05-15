@@ -32,7 +32,7 @@ export default {
       items: [
         {
           title: 'vehicles',
-          to: { name: 'inventory' }
+          to: 'https://express.ambarmotors.com/inventory/used'
         },
         {
           title: 'sell-car',
