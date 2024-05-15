@@ -11,7 +11,7 @@ export default {
       items: [
         {
           title: 'vehicles',
-          to: { name: 'inventory' }
+          to: 'https://express.ambarmotors.com/inventory/used'
         },
         {
           title: 'sell-car',
@@ -61,9 +61,14 @@ export default {
       'toggleMobileMenu'
     ]),
 
-    navLink(link){
-      this.toggleMobileMenu()
-      this.$router.push(this.localePath(link))
+    navLink(link) {
+      this.toggleMobileMenu();
+      // Verifica si link.to es una cadena (indicando un enlace externo)
+      if (typeof link.to === 'string') {
+        window.location.href = link.to; // Redirecciona a la URL externa
+      } else {
+        this.$router.push(link.to); // Navega a la ruta interna
+      }
     }
   }
-}
+};

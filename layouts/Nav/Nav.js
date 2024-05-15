@@ -85,11 +85,19 @@ export default {
     toggleExpand(menu) {
       for (const key of Object.keys(this.shown)) {
         if (key === menu) {
-          this.shown[key] = !this.shown[key]
+          this.shown[key] = !this.shown[key];
         } else {
-          this.shown[key] = false
+          this.shown[key] = false;
         }
+      }
+    },
+    navLink(link) {
+      // Verifica si link.to es una cadena (indicando un enlace externo)
+      if (typeof link.to === 'string') {
+        window.location.href = link.to; // Redirecciona a la URL externa
+      } else {
+        this.$router.push(link.to); // Navega a la ruta interna
       }
     }
   }
-}
+};

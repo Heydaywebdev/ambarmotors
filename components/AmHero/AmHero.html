@@ -8,10 +8,12 @@
         <AmSearchCar display='simple'/>
       </div>
       <div class="browse-all">
-        <nuxt-link :to="'https://express.ambarmotors.com/inventory/used'" class="buy-btn">
+        <!-- Enlace directo a la URL externa -->
+        <a href="https://express.ambarmotors.com/inventory/used" class="buy-btn">
           {{$t('buy')}}
-        </nuxt-link>
+        </a>
         <span class="divider">-OR-</span>
+        <!-- Enlace interno utilizando nuxt-link -->
         <nuxt-link :to="localePath('sell')" class="sell-btn">
           {{$t('sell')}}
         </nuxt-link>
