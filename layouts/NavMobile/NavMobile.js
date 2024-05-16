@@ -9,10 +9,10 @@ export default {
       hideNav: false,
       languageActive:'',
       items: [
-        {
-          title: 'vehicles',
-          to: 'https://express.ambarmotors.com/inventory/used'
-        },
+        // {
+        //   title: 'vehicles',
+        //   to: 'https://express.ambarmotors.com/inventory/used'
+        // },
         {
           title: 'sell-car',
           to: { name: 'sell' }

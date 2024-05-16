@@ -11,6 +11,11 @@
   </nuxt-link>
 
   <ul style="margin: auto;">
+    <li style="display: flex; align-items: flex-end;">
+      <a  href="https://express.ambarmotors.com/inventory/used" target="_blank">
+      Shop Car
+      </a>
+    </li>
     <li style="display: flex; align-items: flex-end;" v-for='(item, key) of items' :key='key'>
       <nuxt-link :to='localePath(item.to.name)'>
         {{ $t(item.title) }}

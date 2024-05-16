@@ -17,7 +17,7 @@ export default {
       },
       shown: { Language: false, More: false },
       items: [
-        { title: 'vehicles', to: 'https://express.ambarmotors.com/inventory/used' },
+        // { title: 'vehicles', to: 'https://express.ambarmotors.com/inventory/used' },
         { title: 'sell-car', to: { name: 'sell' } },
         { title: 'financing', to: { name: 'pre-approved' } },
         { title: 'capitalOne', to: { name: 'capitalOne' } },

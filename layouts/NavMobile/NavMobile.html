@@ -5,6 +5,11 @@
     <span @click="toggleMobileMenu">&times</span>
   </header>
   <ul>
+    <li>
+      <a  href="https://express.ambarmotors.com/inventory/used" target="_blank">
+      Shop Car
+      </a>
+    </li>
     <li v-for="(item, key) of items" :key="key" @click="navLink(item.to.name)">
       {{ $t(item.title) }}
     </li>
