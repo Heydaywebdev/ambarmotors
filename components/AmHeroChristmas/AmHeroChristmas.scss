@@ -52,18 +52,18 @@
       }
 
       .search {
-        display: none;
+        display: none !important;
         width: 473px;
         margin-top:30px;
         @media #{$media-movil, $media-iphone} {
           width: 100%;
-          display: none;
+          display: none !important;
         }
       }
       .browse-all {
         display: none;
         @media #{$media-movil, $media-iphone} {
-          display: flex;
+          display: none !important;
           justify-content: center;
         }
 
