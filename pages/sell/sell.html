@@ -25,6 +25,7 @@
       </div>
     </div>
   </div>
+  <div id="atFrameContainer"></div>
   <div class='hero-items'>
     <div class='wrapper'>
       <div class='steps'>
@@ -119,5 +120,10 @@
     type='application/javascript'
     :src='`${api_url}/appraisal.js`'>
   </script>
+    <script>
+      !function (a, b, c, d) {
+        var e = b.createElement("script"), f = b.scripts[0];
+        a.AccuTradeObject = {dlr: c, url: d}, e.src = d + "embed/embed.js?v=" + Date.now(), f.parentNode.insertBefore(e, f)
+      }(window, document, "0d3cf6d9e530f401c89a91f26bf066ddb0ee9b46", "https://cashoffer.accu-trade.com/");
+      </script>
 </section>
-
