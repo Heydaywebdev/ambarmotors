@@ -17,7 +17,7 @@ export default {
       showMoreFilters: {
         Makes: {
           unlocked: false,
-          unlockable: this.makes.data.length > 12
+          unlockable: this.makes?.data?.length > 12
         }
       },
       toggles: {},

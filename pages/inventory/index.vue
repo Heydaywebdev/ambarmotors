@@ -448,6 +448,7 @@ export default {
 
   beforeMount() {
     this.handleCampaignSource()
+    window.location.href = 'https://express.ambarmotors.com/inventory/used';
   }
 }
 </script>
